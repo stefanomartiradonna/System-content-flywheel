@@ -46,6 +46,27 @@ System-content-flywheel/
 
 ---
 
+## Dove vivono gli articoli di riferimento (public/private)
+
+Il sistema copre più rubriche editoriali (in questo repo e in repo gemelli), ognuna con i
+propri articoli di esempio. Non tutti gli esempi possono stare nello stesso posto:
+
+| Cosa | Dove | Pubblico o privato |
+|---|---|---|
+| Tuoi articoli "da 0 al PMF" (incl. Company Teardown) | `System-content-flywheel/articoli/` | Pubblico |
+| Tuoi articoli HSBG (Marketing Ignorante) | `marketing-ignorante-brain/articoli/` | Pubblico |
+| Esempi di stile Company Teardown (testo di terzi: Michelon, Mastella) | `claude-private-refs/company-teardown/` | **Privato** |
+| Esempi di stile HSBG (testo di terzi: Wiles) | `claude-private-refs/how-small-brands-growth/` | **Privato** |
+
+Regola generale, non solo il caso di oggi: il lavoro tuo è pubblico per scelta di
+portfolio. Il testo integrale scritto da altri, tenuto come riferimento di stile per una
+skill, resta privato — la versione della skill che vive nel repo pubblico (es.
+`~/.claude/skills/company-teardown/references/examples/`) cita solo le note di analisi,
+mai il testo copiato per intero. Vale per ogni rubrica futura con lo stesso bisogno, non
+solo per quelle di oggi.
+
+---
+
 ## Come funziona
 
 ### 1. Sessione di scrittura
