@@ -25,20 +25,40 @@ Write-Host ''
 
 $Prompt = @'
 Esegui la skill content-cockpit in questa directory (System-content-flywheel). E' il run settimanale
-del lunedi: segui il workflow completo dalla Fase 0 alla Fase 9.
+del lunedi: segui il workflow completo dalla Fase 0 alla Fase 10.
 
-Promemoria dei punti dove si sbaglia piu facilmente:
-- PostHog: il project di default e 415565 ed e il sito di un CLIENTE. Il tuo e 413969, organizzazione
-  "Mio Sito". Fai switch-organization e switch-project, poi verifica con una query che il dominio sia
-  stefanomartiradonna.com prima di riportare qualsiasi numero.
-- Misura la finestra MATURA (post di 8-14 giorni fa), non quella fresca.
-- Applica il controllo anti-rumore: sotto 30 eventi di engagement per gruppo, le differenze sotto il
-  50% non sono leggibili e vanno dichiarate tali.
-- Se Chrome non risponde, dichiaralo e lavora sui dati esistenti. Non inventare numeri.
-- Non pubblicare NULLA. Solo bozze.
+Fermati alla Fase 7 e aspetta. Proponi il piano dei 5 pezzi e NON scrivere i post finche non ti dico
+quali tengo. Scrivere cinque pezzi per pubblicarne due butta via il lavoro e mi toglie il gate
+editoriale.
 
-Prima di iniziare la Fase 1 verifica che Chrome sia aperto e loggato su LinkedIn; se non lo e,
-avvisami e chiedi come procedere.
+I cinque punti dove si sbaglia piu facilmente:
+
+1. PostHog: il project di default e 415565 ed e il sito di un CLIENTE (un cardiologo). Il mio e
+   413969, organizzazione "Mio Sito". Fai switch-organization e switch-project, poi verifica con una
+   query su properties.$host che il dominio sia stefanomartiradonna.com PRIMA di riportare qualsiasi
+   numero. Se non lo e, fermati e dimmelo.
+
+2. Misura la finestra MATURA (post pubblicati tra 14 e 8 giorni fa), non quella fresca. Le impressioni
+   crescono per circa una settimana: misurare i post di ieri premia chi ha pubblicato lunedi scorso
+   per un artefatto di misurazione, non per merito.
+
+3. Controllo anti-rumore obbligatorio: per ogni confronto tra gruppi, somma reazioni + commenti del
+   gruppo. Sotto 30, dichiara la differenza non leggibile a meno che non superi il 50%. Scrivilo nel
+   report. La mediana e 275 impressioni: la maggior parte delle oscillazioni e rumore.
+
+4. Precedenza tra le fonti: la skill linkedin-viral-post-writer e l'autorita sulla voce (e mia, la uso
+   anche fuori da questa routine). voce-analisi.md e evidenza su cosa faccio di fatto, informa ma non
+   comanda. Le regole generiche di copywriting perdono sempre. Se la skill e i dati divergono, NON
+   decidere: mettilo nel report e lascia che scelga io.
+
+5. Se Chrome non risponde o un connector e giu, dichiaralo in cima al report e lavora sui dati
+   esistenti segnando cosa e fermo alla settimana scorsa. Non inventare numeri e non fingere che il
+   dato sia fresco.
+
+Non pubblicare NULLA: ne post, ne commenti, ne modifiche al sito. L'output sono bozze che edito io.
+
+Prima della Fase 1 verifica che Chrome sia aperto e loggato su LinkedIn; se non lo e, avvisami e
+chiedi come procedere.
 '@
 
 # Avvia Claude Code interattivo con il prompt del cockpit.
