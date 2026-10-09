@@ -24,10 +24,18 @@ Write-Host '  2. Connector PostHog autorizzato su claude.ai' -ForegroundColor Ye
 Write-Host ''
 
 $Prompt = @'
-Esegui la skill content-cockpit in questa directory (System-content-flywheel). E' il run settimanale
-del lunedi.
+Esegui la skill content-cockpit. E' il run settimanale del lunedi.
 
-PRIMA DI TUTTO: carica la skill content-cockpit e confermami in una riga che l'hai letta, citando il
+DIRECTORY DI LAVORO: C:\Users\Utente\Documents\System-content-flywheel
+Il repo privato con i dati: C:\Users\Utente\Documents\claude-private-refs
+
+Prima di qualsiasi altra cosa verifica di essere nella directory giusta e che sia davvero il repo
+giusto: devono esistere CLAUDE.md, knowledge/INDEX.md e radar/log.md. Se non ci sei, spostati. Se quel
+percorso non esiste o quei file mancano (altro computer, clone incompleto), FERMATI e chiedimi dove
+sta il repo: non indovinare e non lavorare in una cartella diversa, perche il git pull e tutti i
+percorsi del workflow sono relativi a quella.
+
+POI: carica la skill content-cockpit e confermami in una riga che l'hai letta, citando il
 titolo della Fase 9. Se non riesci a caricarla, FERMATI e dimmelo invece di improvvisare: il workflow
 vive li dentro, e senza quel file le fasi elencate qui sotto non esistono da nessuna parte.
 
