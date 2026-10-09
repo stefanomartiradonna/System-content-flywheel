@@ -49,7 +49,12 @@ vincono su questo elenco:
   Fase 4  Conversioni manuali: legge conversions.md (i DM, che nessun sistema vede)
   Fase 5  Radar autori di riferimento: lancia la skill content-radar se sono passati 12+ giorni
           dall'ultima riga di radar/log.md, altrimenti riusa gli angle non ancora sfruttati
-  Fase 6  Temi della settimana da tre fonti: la mia settimana, il mercato, l'archivio
+  Fase 6  Temi della settimana da tre fonti:
+          (a) la mia settimana: commit, file nuovi, mail, calendario e le CALL CON I CLIENTI
+              lette da Granola (domande che tornano, parole loro, sintomo prima della diagnosi)
+              -> anonimizzazione obbligatoria all'ingresso: solo ruolo, settore, scala
+          (b) il mercato: gli autori della watchlist e le conversazioni sui temi core
+          (c) l'archivio: post sopra la mediana di 6+ mesi fa da aggiornare o fondere
   Fase 7  Piano di 5 pezzi -> QUI TI FERMI E ASPETTI
   Fase 8  Scrive solo i pezzi che ho scelto, con brief immagine e link UTM
   Fase 9  Auto-miglioramento: impara dalle mie correzioni e verifica le previsioni vecchie
