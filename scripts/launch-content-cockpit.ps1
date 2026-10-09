@@ -25,7 +25,27 @@ Write-Host ''
 
 $Prompt = @'
 Esegui la skill content-cockpit in questa directory (System-content-flywheel). E' il run settimanale
-del lunedi: segui il workflow completo dalla Fase 0 alla Fase 10.
+del lunedi.
+
+PRIMA DI TUTTO: carica la skill content-cockpit e confermami in una riga che l'hai letta, citando il
+titolo della Fase 9. Se non riesci a caricarla, FERMATI e dimmelo invece di improvvisare: il workflow
+vive li dentro, e senza quel file le fasi elencate qui sotto non esistono da nessuna parte.
+
+Le 11 fasi, solo come indice per sapere cosa aspettarsi. Le istruzioni vere stanno nella skill e
+vincono su questo elenco:
+
+  Fase 0  Contesto: git pull, legge foundation/, hypotheses, craft, voce-analisi, temi.csv
+  Fase 1  Aggiorna il dataset: snapshot LinkedIn da Chrome, rilancia parse_snapshot.py
+  Fase 2  KPI dei post sulla finestra matura, migliore della settimana, trend, anti-rumore
+  Fase 3  PostHog: visite al sito e click sulle CTA (attenzione al project, punto 1 sotto)
+  Fase 4  Conversioni manuali: legge conversions.md (i DM, che nessun sistema vede)
+  Fase 5  Radar autori di riferimento: lancia la skill content-radar se sono passati 12+ giorni
+          dall'ultima riga di radar/log.md, altrimenti riusa gli angle non ancora sfruttati
+  Fase 6  Temi della settimana da tre fonti: la mia settimana, il mercato, l'archivio
+  Fase 7  Piano di 5 pezzi -> QUI TI FERMI E ASPETTI
+  Fase 8  Scrive solo i pezzi che ho scelto, con brief immagine e link UTM
+  Fase 9  Auto-miglioramento: impara dalle mie correzioni e verifica le previsioni vecchie
+  Fase 10 Output: scrive il report in claude-private-refs/linkedin/cockpit/ e committa
 
 Fermati alla Fase 7 e aspetta. Proponi il piano dei 5 pezzi e NON scrivere i post finche non ti dico
 quali tengo. Scrivere cinque pezzi per pubblicarne due butta via il lavoro e mi toglie il gate
