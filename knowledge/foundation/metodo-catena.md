@@ -6,7 +6,8 @@
 > Dentro: Dunford (architetture), Aaker (brand), Estner (anchor), Fletch (H1) — raccordati, non giustapposti.
 > Questo file è la fonte per pillar, infografiche e articoli di metodo.
 
-Ultima revisione: 2026-07 (dal doc POV & Content Strategy, validato da Stefano).
+Ultima revisione: 2026-10-12 (aggiunto il binario parallelo distribuzione/revenue, dal pillar 5).
+Revisione precedente: 2026-07 (dal doc POV & Content Strategy, validato da Stefano).
 
 ---
 
@@ -39,6 +40,33 @@ Copy (come lo dici)
   ↓
 HERO / H1                   → decide LE 5-10 PAROLE che il buyer legge per prime
 ```
+
+### Il binario parallelo: distribuzione e revenue (aggiunto 2026-10)
+
+La catena qui sopra è la catena del **posizionamento**: scende dalla tesi alla singola riga della hero.
+Non è l'unica cosa che si decide in alto. Dalla **tesi di prodotto** e dal **POV** si stacca un secondo binario,
+che corre in parallelo e si ricongiunge all'altezza di ICP + Anchor:
+
+```
+TESI DI PRODOTTO + POV
+  ├─→ [binario posizionamento]  architettura → strategia → ICP/anchor → ... → hero
+  └─→ [binario distribuzione]   motion (self-serve / PLG / sales-led / ibrida)
+                                  ↓
+                                growth loop (quale pezzo del prodotto acquisisce senza spinta)
+                                  ↓
+                                revenue model + pricing + packaging
+                                  ↓
+                                ACV sostenibile → quale motion ti puoi permettere (si richiude sull'ICP)
+```
+
+**Perché è un binario e non un livello in fondo:** queste scelte determinano **cosa costruisci**, non come lo
+racconti. Un onboarding che vende da solo, un loop di invito, un report esportabile che il champion porta in
+comitato: sono feature con un owner e una roadmap, non campagne. Deciderle dopo significa trovare il prodotto
+già sbagliato. Vedi pillar 5 in [pov.md](pov.md).
+
+**Il raccordo che conta:** pricing e ACV decidono quale motion è sostenibile, e la motion ridefinisce l'ICP.
+Un ACV da 5K non regge una motion da 50K. Quando i due binari non si parlano, esce il caso classico:
+positioning enterprise e prezzo self-serve, o il contrario.
 
 ---
 

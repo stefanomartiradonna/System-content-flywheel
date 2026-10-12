@@ -8,7 +8,9 @@
 > POI si propagano i derivati. Mai modificare un derivato senza riflettere il cambiamento qui.
 > Mantieni in un posto, consuma in molti. Senza questa disciplina la voce torna a divergere su 15 file.
 
-Ultima revisione: 2026-07 (aggiornamento concept "Accumulo" — dal doc POV & Content Strategy, validato da Stefano).
+Ultima revisione: 2026-10-12 (allargamento del nemico "accumulo" alle 4 forme + 3 pillar nuovi:
+tesi come spina dorsale, distribuzione dentro il prodotto, fine del CMO-collante. Input di Stefano).
+Revisione precedente: 2026-07 (concept "Accumulo", dal doc POV & Content Strategy).
 
 ---
 
@@ -43,23 +45,34 @@ partendo da goal, KPI e revenue del business — mai piani che la startup non pu
 
 → versione completa in [pov.md](pov.md)
 
-**POV-MASTER — "Il tuo problema non è il copy."** Homepage, deck, sales, adv che non convertono sono i posti
-dove senti dolore, non dove nasce. La causa è il **Problema da Accumulo di Features**: cento sì detti sotto
-pressione (cliente, competitor, board, visione), nessuno derivato da una tesi. Il nemico: accumulo di features,
-crescita per accumulo, tattiche sparse di marketing.
+**POV-MASTER: "Il tuo problema non è il copy."** Homepage, deck, sales, adv che non convertono sono i posti
+dove senti dolore, non dove nasce. La causa è l'**accumulo**: il modo di default con cui una startup risponde
+a un problema, cioè aggiungere qualcosa. Una feature perché l'ha chiesta il cliente grosso, un SDR perché la
+pipeline è ferma, un tool perché l'outbound non gira, un'agenzia perché i contenuti non escono, una figura che
+coordina le agenzie. Ogni aggiunta, da sola, è sensata. La somma è un'azienda che non ha mai deciso niente.
 
-**Le 5 cose mai decise** (il livello sopra che manca): ① tesi di prodotto · ② POV · ③ positioning ·
-④ architettura di posizionamento · ⑤ strategia di posizionamento. Non sono lavoro di marketing da fare alla fine:
-sono decisioni di prodotto e di business da prendere all'inizio, perché influenzano business e revenue.
+**Le 4 forme dell'accumulo:** di **features** (il prodotto non si capisce più) · di **headcount**
+(schiere di SDR/BDR al posto di una distribuzione che funziona) · di **stack** (tool e automation al posto
+di una tesi) · di **fornitori** (agenzie, più il collante che le governa). Stesso meccanismo in tutte:
+**comprare capacità invece di prendere una decisione.**
 
-Sotto-POV (assorbono i POV precedenti, riformulati):
-- **Il reframe madre** — Non hai un problema di copy/GTM/sales. Hai una decisione di prodotto mai presa. (ex "non è GTM, è positioning" — ora a livello business)
-- **La sequenza invertita** — Il positioning è il primo passo del prodotto, non l'ultimo del marketing. (ex "il 90% costruisce il GTM al contrario")
-- **Moltiplicatori, non sostituti** — Tool e tattiche amplificano una tesi che esiste; non la creano. (ex POV tool GTM — ora caso particolare dell'accumulo)
+**Le 6 cose mai decise** (il livello sopra che manca): ① tesi di prodotto · ② POV · ③ positioning ·
+④ architettura di posizionamento · ⑤ strategia di posizionamento · ⑥ modello di distribuzione e di revenue.
+Non sono lavoro di marketing da fare alla fine: sono decisioni di prodotto e di business da prendere all'inizio,
+perché determinano cosa costruisci, in che ordine, e cosa rifiuti.
+
+Sotto-POV / pillar (1-3 assorbono i POV precedenti, 4-6 aggiunti in revisione 2026-10):
+- **1. Il reframe madre**: Non hai un problema di copy/GTM/sales. Hai una decisione di prodotto mai presa. (ex "non è GTM, è positioning", ora a livello business)
+- **2. La sequenza invertita**: Il positioning è il primo passo del prodotto, non l'ultimo del marketing. (ex "il 90% costruisce il GTM al contrario")
+- **3. Moltiplicatori, non sostituti**: Tool e tattiche amplificano una tesi che esiste; non la creano. Caso di punta: "GTM engineering" che in Italia significa outbound 2.0, tutta engineering e zero GTM.
+- **4. Il coltello e la spina dorsale**: La tesi di prodotto non taglia soltanto: è anche l'unica cosa che tiene insieme features e prodotti. La narrazione totale non si scrive dopo, è il residuo di una tesi che ha selezionato.
+- **5. Distribuzione dentro il prodotto**: La distribuzione è il collo di bottiglia vero, ma la risposta non è assumere schiere di SDR. Distribuzione, growth loop, pricing e revenue model si decidono mentre costruisci, perché decidono cosa costruisci.
+- **6. Il CMO-collante è una figura finita**: Governare fornitori di execution abbondante non vale più niente. Oggi serve un mandato operativo: in call, sui contenuti, con un business case che dica quanto vale una feature o un canale. Il POV attacca il mandato, non il titolo né la persona.
 
 **Lente AI (trasversale, non pillar):** l'AI non crea il problema dell'accumulo, lo rende mortale.
 Costruire costa zero → Frankenstein 10x più veloci; la parità di feature non è più un fossato → il POV è
-l'unica cosa scarsa; il buyer annega nel rumore → la chiarezza vince perché è l'unica cosa comprensibile.
+l'unica cosa scarsa; il buyer annega nel rumore → la chiarezza vince perché è l'unica cosa comprensibile;
+anche l'execution di marketing costa zero → coordinare fornitori non è più un mestiere, decidere sì (pillar 6).
 
 **Frase manifesto:** "Crediamo che un prodotto confuso non sia un problema di comunicazione ma di decisioni
 mai prese, e per questo usiamo il positioning come prima leva. Quella che taglia, non quella che racconta:
@@ -71,7 +84,7 @@ perché non puoi scrivere bene un prodotto che non ha mai imparato a dire di no.
 
 → versione completa in [audience.md](audience.md)
 
-Primaria: **founder di startup B2B tech in growth** — prodotto che vende, allargato per accumulo
+Primaria: **founder di startup B2B tech in growth**: prodotto che vende, allargato per accumulo
 (feature su feature, a volte prodotto su prodotto) fino a non riuscire più a spiegare cosa fanno.
 Di riflesso: founder early-stage che non vuole finire lì; PMI che ci è dentro da anni senza accorgersene.
 Negative: chi cerca la scorciatoia (l'hook che fa numeri, il "copy che converta" senza toccare sotto).

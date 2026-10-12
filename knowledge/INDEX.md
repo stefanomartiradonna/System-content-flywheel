@@ -32,9 +32,12 @@ Due famiglie: la **SOSTANZA** (chi sei, cosa dici, su quali prove) e la **FORMA*
 
 ## Stato attuale della knowledge base
 
-**Foundation**: CONFERMATA (2026-07) — concept "Accumulo" validato da Stefano (doc POV & Content Strategy).
-Nemico = accumulo di features / decisioni mai prese; audience primaria = founder B2B tech in growth;
-POV-master + 3 sotto-POV + lente AI; nuovi file `metodo-catena.md` e `content-strategy.md` (hub & spoke Substack→LinkedIn)
+**Foundation**: AGGIORNATA (2026-10-12). Il nemico si allarga dalle features alle **4 forme dell'accumulo**
+(features, headcount, stack, fornitori): comprare capacità invece di decidere. Audience primaria = founder
+B2B tech in growth. POV-master + **6 pillar** + lente AI (4 meccanismi). I pillar 4, 5, 6 (tesi come spina
+dorsale, distribuzione dentro il prodotto, fine del CMO-collante) nascono da convinzione e hanno zero post
+misurati: vanno confrontati coi dati alla prossima review. Aggiunto in `metodo-catena.md` il binario
+parallelo distribuzione/revenue. Base 2026-07: concept "Accumulo" (doc POV & Content Strategy).
 **Client Intelligence**: struttura + template creati — 1 engagement estratto (LEVA #1)
 **Proof Library**: struttura creata — da popolare con risultati reali
 **References**: 5 autori analizzati (apr 2026) + pattern cross-autore

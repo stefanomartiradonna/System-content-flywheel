@@ -5,7 +5,9 @@
 > Questo NON è un ICP di prodotto (non vendo un prodotto). È l'ICP del **contenuto**: chi voglio che
 > legga, salvi, condivida e — a valle — mi contatti per consulenza. Spesso coincide con i clienti, non sempre.
 
-Ultima revisione: 2026-07 (concept "Accumulo" — buyer analysis dal doc POV & Content Strategy, validata da Stefano).
+Ultima revisione: 2026-10-12 (aggiunte le convinzioni e il lessico dei pillar nuovi 4, 5, 6: tesi come
+spina dorsale, distribuzione dentro il prodotto, fine del CMO-collante).
+Revisione precedente: 2026-07 (concept "Accumulo", buyer analysis dal doc POV & Content Strategy).
 
 ---
 
@@ -24,6 +26,11 @@ Ultima revisione: 2026-07 (concept "Accumulo" — buyer analysis dal doc POV & C
 - "Più features = più valore = più mercato. Aggiungere allarga sempre." *(l'accumulo visto come progresso, non come costo)*
 - "Il positioning è marketing, e il marketing viene dopo che il prodotto è pronto." *(la sequenza invertita — il nemico del POV)*
 - "Tagliare significa perdere fatturato e clienti." *(ogni no letto come mancato ricavo — blocca l'azione anche dopo aver capito la diagnosi)*
+- "Serve una narrazione che unisca tutto quello che facciamo." *(chiedono al copy il lavoro che doveva fare la tesi: pillar 4)*
+- "La pipeline è ferma: ci servono due SDR." *(l'accumulo di headcount, la risposta più rapida e più costosa: pillar 5)*
+- "Il GTM lo costruiamo quando il prodotto è pronto." *(distribuzione come layer da attaccare sopra, non come decisione di prodotto: pillar 5)*
+- "Ci serve un CMO che metta ordine e coordini i fornitori." *(il mandato vecchio: governa i canali e non tocca nessuna leva di crescita: pillar 6)*
+- "Facciamo GTM engineering." *(quasi sempre significa outbound 2.0: tool e automation, zero decisioni di go-to-market: pillar 3)*
 
 ### Obiezioni prima di comprare (con risposta)
 
@@ -51,6 +58,9 @@ Ultima revisione: 2026-07 (concept "Accumulo" — buyer analysis dal doc POV & C
 - "Vendiamo a tutti, dal piccolo all'enterprise."
 - "Il prodotto è potente ma complesso." *("complesso" = la parola con cui giustificano la confusione)*
 - "Come founder sto diventando il bottleneck per l'acquisizione e chiusura contratti, come posso risolvere?"
+- "Dobbiamo strutturare la macchina commerciale." *(= sto per assumere, prima di aver reso ripetibile niente)*
+- "Il problema è la distribuzione, non il prodotto." *(metà vera: la diagnosi è giusta, la cura che hanno in mente no)*
+- "Abbiamo preso un'agenzia ma serve qualcuno che la coordini."
 
 ---
 
