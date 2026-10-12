@@ -4,7 +4,7 @@ Regola operativa: **nessun link esce da un post senza UTM.** Un link non taggato
 che arriva sul sito e risulta genericamente "LinkedIn", senza nessun modo di risalire al post.
 Non è recuperabile a posteriori: o è taggato quando pubblichi, o quel dato è perso per sempre.
 
-PostHog (project `415565`) cattura gli UTM in automatico, quindi non va toccato niente sul sito.
+PostHog cattura gli UTM in automatico, quindi non va toccato niente sul sito.
 L'unico cambio è nel link che incolli.
 
 ---

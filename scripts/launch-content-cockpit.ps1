@@ -49,24 +49,26 @@ vincono su questo elenco:
   Fase 4  Conversioni manuali: legge conversions.md (i DM, che nessun sistema vede)
   Fase 5  Radar autori di riferimento: lancia la skill content-radar se sono passati 12+ giorni
           dall'ultima riga di radar/log.md, altrimenti riusa gli angle non ancora sfruttati
-  Fase 6  Temi della settimana da tre fonti:
+  Fase 6  Temi della settimana da quattro fonti:
           (a) la mia settimana: commit, file nuovi, mail, calendario e le CALL CON I CLIENTI
               lette da Granola (domande che tornano, parole loro, sintomo prima della diagnosi)
               -> anonimizzazione obbligatoria all'ingresso: solo ruolo, settore, scala
           (b) il mercato: gli autori della watchlist e le conversazioni sui temi core
           (c) l'archivio: post sopra la mediana di 6+ mesi fa da aggiornare o fondere
-  Fase 7  Piano di 5 pezzi -> QUI TI FERMI E ASPETTI
-  Fase 8  Scrive solo i pezzi che ho scelto, con brief immagine e link UTM
+          (d) le mosse delle aziende tech negli ultimi 7-10 giorni, cercate sul web: la notizia
+              e' il pretesto per spiegare un mio pillar su un caso famoso, numeri verificati
+  Fase 7  Due liste: 5 notizie tech e 5 angoli dagli autori -> QUI TI FERMI E ASPETTI
+  Fase 8  Scrive solo quello che ho scelto, con brief immagine e link UTM
   Fase 9  Auto-miglioramento: impara dalle mie correzioni e verifica le previsioni vecchie
   Fase 10 Output: scrive il report in claude-private-refs/linkedin/cockpit/ e committa
 
-Fermati alla Fase 7 e aspetta. Proponi il piano dei 5 pezzi e NON scrivere i post finche non ti dico
-quali tengo. Scrivere cinque pezzi per pubblicarne due butta via il lavoro e mi toglie il gate
-editoriale.
+Fermati alla Fase 7 e aspetta. Proponi le due liste (5 notizie tech, 5 angoli dagli autori) e NON
+scrivere i post finche non ti dico cosa sviluppare. Scrivere pezzi che poi non pubblico butta via il
+lavoro e mi toglie il gate editoriale.
 
 I cinque punti dove si sbaglia piu facilmente:
 
-1. PostHog: il project di default e 415565 ed e il sito di un CLIENTE (un cardiologo). Il mio e
+1. PostHog: il project di default del connector puo essere il sito di un CLIENTE. Il mio e
    413969, organizzazione "Mio Sito". Fai switch-organization e switch-project, poi verifica con una
    query su properties.$host che il dominio sia stefanomartiradonna.com PRIMA di riportare qualsiasi
    numero. Se non lo e, fermati e dimmelo.
