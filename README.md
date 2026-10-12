@@ -130,6 +130,17 @@ GitHub è il punto di sincronizzazione. Prima di ogni sessione in Cowork o Web: 
 
 ---
 
+## La routine del lunedì
+
+Ogni lunedì alle 8:00 Claude prepara il report sui contenuti: misura i post della settimana, legge
+sito e conversioni, e chiude con due liste tra cui scegliere, 5 notizie tech da leggere con i propri
+pillar e 5 angoli dagli autori di riferimento.
+
+Come è fatta e come si installa su un computer nuovo, partendo solo da GitHub:
+[scripts/README.md](scripts/README.md).
+
+---
+
 ## Autori analizzati
 
 | Autore | Perché | Analizzato |
