@@ -84,6 +84,35 @@ Ogni entry contiene:
 
 ---
 
+## 2026-10 — LinkedIn — Tesi di Prodotto (call vendita confuse)
+
+**File**: `post-pubblicati/Post-Tesi-Prodotto-Call-Sales-2026-10.md`
+**Tipo**: MoF
+**Tema**: Positioning / Tesi di prodotto — pattern H01 (reframe diagnostico)
+
+**Hook (versione pubblicata)**:
+> Riascolta 3 call registrate dei tuoi sales (o le tue)
+> Se quasi non riconosci il tuo prodotto, non è colpa loro
+> è perchè non hai una TESI DI PRODOTTO
+
+**Pattern usato**:
+- Tipo hook: **reframe diagnostico** (H01) — "non è un problema di sales/GTM, è un problema a monte (nessuna tesi di prodotto)"
+- Struttura: Hook → autorità ("lo vedo con founder early stage e growth") → 3 sintomi ⛔ → catena causale → definizione Tesi di Prodotto → framework 5 step nel carosello → 4 benefici ✅ → CTA articolo primo commento → domanda finale specifica
+- Carosello associato: 10 slide, grafica Claude Design, contenuti originali
+
+**Ipotesi testata**:
+- H01 — **contaminata, non valida come test**: vedi nota sotto
+
+**Performance** *(riportata da Stefano il 2026-10-12)*:
+- Impressions: 19
+- Reactions: _
+- Commenti: _
+- Click link (primo commento): _
+
+**Note post-pubblicazione**: Reach crollato molto sotto il baseline storico dei post con carosello (632 e 304 impressions nei due casi precedenti registrati sopra) — 19 impressions è 15-30x sotto quel range, troppo basso per essere spiegato da debolezza del hook. Sospetti principali, da verificare da Stefano (non verificabili da Claude in questa sessione): visibilità del post (Connections vs Anyone), zero engagement nella prima ora dopo pubblicazione, rendering/processing del PDF carosello su LinkedIn (thumbnail rotta o conversione incompleta). Bassa probabilità: penalizzazione per grafica AI (nessuna evidenza che LinkedIn distingua la grafica, solo rischio tecnico di export — aspect ratio, risoluzione). **Questo post avrebbe potuto essere il primo test reale di H01 sulla mia audience (vedi nota in `hypotheses/active.md`), ma il crollo di reach lo rende inutilizzabile come evidenza pro o contro: il hook non è mai arrivato a un'audience ampia.**
+
+---
+
 ## Template per nuovi post
 
 ```markdown

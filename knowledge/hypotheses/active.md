@@ -42,6 +42,7 @@ Regole:
 **Status**: ipotesi forte — da testare sulla mia audience italiana. Ora ho un caso cliente mio da cui costruire il post (non più solo quote di Estner/Wester).
 **Nota 2026-10-05 (perché NON è ancora una regola)**: le evidenze pro sono 6 e nessuna contro, quindi la soglia numerica delle 3 conferme è superata da tempo. Non promuovo perché **tutte e 6 vengono da audience altrui** — anglofone, follower alti, B2B US/NL/DE. Una regola in `platforms/linkedin/rules.md` mi direbbe cosa fare di default sui MIEI post, e la promuoverei su zero dati miei. La soglia che manca non è quantitativa: servono 2-3 miei post a parità di tema, uno con hook reframe e uno con hook informativo, e il confronto. Finché quel confronto non esiste, questa resta un'ipotesi forte e non una regola. **Blocco specifico: nessun mio post pubblicato con questo pattern misurato in `../posts/published.md`.**
 **Nota 2026-07 (concept Accumulo)**: il bersaglio del reframe sale di livello — la misconception madre del nuovo buyer è "è un problema di copy: basta spiegare meglio le features". Il pattern resta identico; il ribaltamento ora punta a "hai una decisione di prodotto mai presa" (vedi `../foundation/pov.md`, sotto-POV 1).
+**Nota 2026-10-12 (primo tentativo, risultato inutilizzabile)**: pubblicato un post con questo pattern ("non è un problema di sales/GTM, è perché non hai una Tesi di Prodotto" — vedi `../posts/published.md`, entry 2026-10). Reach crollato a 19 impressions, 15-30x sotto il baseline degli altri post con carosello. Il crollo è troppo estremo per essere spiegato da debolezza del hook (probabile causa: visibilità del post, zero engagement nella prima ora, o rendering del PDF — tutto da verificare da Stefano). **Il blocco descritto sopra resta aperto**: questo non conta come test di H01, perché il hook non è mai arrivato a un'audience ampia. Serve un retry con distribuzione sana prima di poter leggere qualcosa sul pattern stesso.
 
 ---
 
@@ -105,6 +106,7 @@ Regole:
 - Maja Voje: stessa pattern + chiusura domanda → engagement simile
 - Estner: i post con CTA ("comment GTM" per ricevere) hanno molti commenti ma engagement artificiale
 **Evidenze contro**: 
+- Dato mio (cockpit 2026-10-12, 77 post maturi, escluso l'outlier Como/Disney): i post che chiudono con una domanda (n=15) fanno una mediana di 5,70 commenti ogni 1000 impressioni, tutti gli altri (n=62) 5,48. Differenza del 4%: nessun effetto visibile sulla mia audience. Limiti: confronto osservazionale tra post su temi diversi, non un test a parità di tema; etichette di chiusura assegnate da un solo lettore; il gruppo "altri" mescola rimandi, affermazioni e CTA di contatto, quindi non isola il confronto domanda contro CTA diretta che l'ipotesi formula.
 **Status**: ipotesi con evidenza indiziaria forte — da testare sistematicamente nei prossimi 10 post
 
 ---
