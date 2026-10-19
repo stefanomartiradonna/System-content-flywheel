@@ -111,6 +111,8 @@ Ogni entry contiene:
 
 **Note post-pubblicazione**: Reach crollato molto sotto il baseline storico dei post con carosello (632 e 304 impressions nei due casi precedenti registrati sopra) — 19 impressions è 15-30x sotto quel range, troppo basso per essere spiegato da debolezza del hook. Sospetti principali, da verificare da Stefano (non verificabili da Claude in questa sessione): visibilità del post (Connections vs Anyone), zero engagement nella prima ora dopo pubblicazione, rendering/processing del PDF carosello su LinkedIn (thumbnail rotta o conversione incompleta). Bassa probabilità: penalizzazione per grafica AI (nessuna evidenza che LinkedIn distingua la grafica, solo rischio tecnico di export — aspect ratio, risoluzione). **Questo post avrebbe potuto essere il primo test reale di H01 sulla mia audience (vedi nota in `hypotheses/active.md`), ma il crollo di reach lo rende inutilizzabile come evidenza pro o contro: il hook non è mai arrivato a un'audience ampia.**
 
+**Aggiornamento 2026-10-19**: l'originale del 9/10 è stato eliminato e il post è stato ripubblicato il 12/10, stesso carosello, hook riscritto in prima persona ("Una delle prime cose che faccio da fractional è ascoltare le call di vendita"), reframe spostato dopo i sintomi. Reach della ripubblicazione nella norma dei caroselli (numeri nel report privato del cockpit): conferma che il problema del 9/10 era la distribuzione. Non vale come test di H01 perché l'hook nuovo non è un reframe.
+
 ---
 
 ## Template per nuovi post
