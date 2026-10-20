@@ -32,12 +32,13 @@ Due famiglie: la **SOSTANZA** (chi sei, cosa dici, su quali prove) e la **FORMA*
 
 ## Stato attuale della knowledge base
 
-**Foundation**: AGGIORNATA (2026-10-12). Il nemico si allarga dalle features alle **4 forme dell'accumulo**
-(features, headcount, stack, fornitori): comprare capacità invece di decidere. Audience primaria = founder
-B2B tech in growth. POV-master + **6 pillar** + lente AI (4 meccanismi). I pillar 4, 5, 6 (tesi come spina
-dorsale, distribuzione dentro il prodotto, fine del CMO-collante) nascono da convinzione e hanno zero post
-misurati: vanno confrontati coi dati alla prossima review. Aggiunto in `metodo-catena.md` il binario
-parallelo distribuzione/revenue. Base 2026-07: concept "Accumulo" (doc POV & Content Strategy).
+**Foundation**: AGGIORNATA (2026-10-20). Il nemico resta l'**accumulo** nelle 4 forme (features, headcount,
+stack, fornitori): comprare capacità invece di decidere. Audience primaria = founder B2B tech in growth.
+POV-master + **4 pillar con 16 sotto-argomenti** (A Accumulo, B Direzione, C Forma, D Business) + lente AI.
+Sostituiscono i 6 pillar del 2026-10-12; il CMO-collante è in "Fuori struttura" di `pov.md`. C3 (anchor e
+messaggio per canale) da confermare. I sotto-argomenti nascono da scelta, non da evidenza misurata: vanno
+confrontati coi dati alla prossima review. `audience.md`, `content-strategy.md` e `metodo-catena.md` citano
+ancora la numerazione a 6 pillar: da allineare. Base 2026-07: concept "Accumulo" (doc POV & Content Strategy).
 **Client Intelligence**: struttura + template creati — 1 engagement estratto (LEVA #1)
 **Proof Library**: struttura creata — da popolare con risultati reali
 **References**: 5 autori analizzati (apr 2026) + pattern cross-autore

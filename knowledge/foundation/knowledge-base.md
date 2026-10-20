@@ -8,9 +8,11 @@
 > POI si propagano i derivati. Mai modificare un derivato senza riflettere il cambiamento qui.
 > Mantieni in un posto, consuma in molti. Senza questa disciplina la voce torna a divergere su 15 file.
 
-Ultima revisione: 2026-10-12 (allargamento del nemico "accumulo" alle 4 forme + 3 pillar nuovi:
-tesi come spina dorsale, distribuzione dentro il prodotto, fine del CMO-collante. Input di Stefano).
-Revisione precedente: 2026-07 (concept "Accumulo", dal doc POV & Content Strategy).
+Ultima revisione: 2026-10-20 (i pillar passano da 6 a 4, con 16 sotto-argomenti: A Accumulo, B Direzione,
+C Forma, D Business. C3 da confermare. Input di Stefano).
+Revisione precedente: 2026-10-12 (allargamento del nemico "accumulo" alle 4 forme + 3 pillar nuovi:
+tesi come spina dorsale, distribuzione dentro il prodotto, fine del CMO-collante).
+Revisione ancora precedente: 2026-07 (concept "Accumulo", dal doc POV & Content Strategy).
 
 ---
 
@@ -61,18 +63,36 @@ di una tesi) · di **fornitori** (agenzie, più il collante che le governa). Ste
 Non sono lavoro di marketing da fare alla fine: sono decisioni di prodotto e di business da prendere all'inizio,
 perché determinano cosa costruisci, in che ordine, e cosa rifiuti.
 
-Sotto-POV / pillar (1-3 assorbono i POV precedenti, 4-6 aggiunti in revisione 2026-10):
-- **1. Il reframe madre**: Non hai un problema di copy/GTM/sales. Hai una decisione di prodotto mai presa. (ex "non è GTM, è positioning", ora a livello business)
-- **2. La sequenza invertita**: Il positioning è il primo passo del prodotto, non l'ultimo del marketing. (ex "il 90% costruisce il GTM al contrario")
-- **3. Moltiplicatori, non sostituti**: Tool e tattiche amplificano una tesi che esiste; non la creano. Caso di punta: "GTM engineering" che in Italia significa outbound 2.0, tutta engineering e zero GTM.
-- **4. Il coltello e la spina dorsale**: La tesi di prodotto non taglia soltanto: è anche l'unica cosa che tiene insieme features e prodotti. La narrazione totale non si scrive dopo, è il residuo di una tesi che ha selezionato.
-- **5. Distribuzione dentro il prodotto**: La distribuzione è il collo di bottiglia vero, ma la risposta non è assumere schiere di SDR. Distribuzione, growth loop, pricing e revenue model si decidono mentre costruisci, perché decidono cosa costruisci.
-- **6. Il CMO-collante è una figura finita**: Governare fornitori di execution abbondante non vale più niente. Oggi serve un mandato operativo: in call, sui contenuti, con un business case che dica quanto vale una feature o un canale. Il POV attacca il mandato, non il titolo né la persona.
+**I 4 pillar e i 16 sotto-argomenti** (struttura decisa il 2026-10-20: massimo 4 pillar; sostituisce i 6 pillar del 2026-10-12):
 
-**Lente AI (trasversale, non pillar):** l'AI non crea il problema dell'accumulo, lo rende mortale.
-Costruire costa zero → Frankenstein 10x più veloci; la parità di feature non è più un fossato → il POV è
-l'unica cosa scarsa; il buyer annega nel rumore → la chiarezza vince perché è l'unica cosa comprensibile;
-anche l'execution di marketing costa zero → coordinare fornitori non è più un mestiere, decidere sì (pillar 6).
+- **A. Accumulo (il problema)**
+  - A1. Crescita per accumulo: il modo di default di rispondere a un problema è aggiungere. Ogni aggiunta ha senso, la somma no.
+  - A2. Perdere la narrazione totale: se non sai dire come si legano le cose che fai, il buyer non lo farà per te. È un sintomo, non un problema di copy.
+  - A3. POV e posizionamento annacquati: a forza di dire sì a tutti, ogni messaggio diventa tiepido.
+- **B. Direzione (decidere prima di costruire)**
+  - B1. Tesi di prodotto: cos'è, a cosa serve, come si costruisce.
+  - B2. POV forte in era AI: le aziende non cercano solo un tool, cercano chi dica loro dove sta andando il settore.
+  - B3. Velocità con direzione: costruire e testare costa quasi zero, quindi il vantaggio è taste e giudizio su cosa costruire.
+  - B4. Fondamenta prima degli asset: tesi, POV e positioning vengono prima di messaging, asset e canali.
+- **C. Forma (da direzione a posizionamento e architettura)**
+  - C1. Architetture di prodotto: cosa sono, quale usare e quando.
+  - C2. Strategie di posizionamento: il campo in cui combatti (head-to-head, riformula una categoria matura, Big Fish Smaller Pond, categoria immatura in crescita, nuova categoria come percorso).
+  - C3. Anchor e messaggio per canale: il vocabolario con cui il buyer ti classifica; homepage e landing paid non hanno lo stesso messaggio. **Da confermare.**
+- **D. Business (GTM e revenue dentro il prodotto)**
+  - D1. Brand e GTM dentro il prodotto: si decidono mentre costruisci, non si attaccano dopo.
+  - D2. Motion, modello di business e pricing: PLG, SLG, PLS, MLG e FLG in coerenza con il modello di revenue e con l'ACV.
+  - D3. Business case: prima di aggiungere una feature o aprire un canale, stimi impatto economico, sforzo e costi.
+  - D4. La catena in una linea: il modello di business decide il GTM, il GTM decide come posizioni, il posizionamento decide l'H1.
+  - D5. Il champion: un posizionamento per il champion più la gestione delle obiezioni per gli altri stakeholder.
+  - D6. Le direzioni di crescita: quando un secondo prodotto ha senso e quando no.
+
+Fuori dai 4 pillar (materiale conservato in `pov.md`, sezione "Fuori struttura"): il CMO-collante come figura
+finita, e il caso "GTM engineering" come pillar a sé.
+
+**Lente AI (trasversale; è la tesi di B2 e B3, altrove alza la posta):** l'AI non crea il problema dell'accumulo,
+lo rende mortale. Costruire costa zero → Frankenstein 10x più veloci; la parità di feature non è più un fossato
+→ il POV è l'unica cosa scarsa; il buyer annega nel rumore → la chiarezza vince perché è l'unica cosa
+comprensibile; anche l'execution di marketing costa zero → decidere conta più che coordinare.
 
 **Frase manifesto:** "Crediamo che un prodotto confuso non sia un problema di comunicazione ma di decisioni
 mai prese, e per questo usiamo il positioning come prima leva. Quella che taglia, non quella che racconta:
