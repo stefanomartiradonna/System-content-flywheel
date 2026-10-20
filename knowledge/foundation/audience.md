@@ -5,9 +5,11 @@
 > Questo NON è un ICP di prodotto (non vendo un prodotto). È l'ICP del **contenuto**: chi voglio che
 > legga, salvi, condivida e — a valle — mi contatti per consulenza. Spesso coincide con i clienti, non sempre.
 
-Ultima revisione: 2026-10-12 (aggiunte le convinzioni e il lessico dei pillar nuovi 4, 5, 6: tesi come
-spina dorsale, distribuzione dentro il prodotto, fine del CMO-collante).
-Revisione precedente: 2026-07 (concept "Accumulo", buyer analysis dal doc POV & Content Strategy).
+Ultima revisione: 2026-10-20 (riferimenti ai pillar riallineati alla struttura a 4 pillar e 16 sotto-argomenti
+di `pov.md`: A Accumulo, B Direzione, C Forma, D Business).
+Revisione precedente: 2026-10-12 (aggiunte le convinzioni e il lessico su tesi come spina dorsale,
+distribuzione dentro il prodotto, fine del CMO-collante).
+Revisione ancora precedente: 2026-07 (concept "Accumulo", buyer analysis dal doc POV & Content Strategy).
 
 ---
 
@@ -26,11 +28,11 @@ Revisione precedente: 2026-07 (concept "Accumulo", buyer analysis dal doc POV & 
 - "Più features = più valore = più mercato. Aggiungere allarga sempre." *(l'accumulo visto come progresso, non come costo)*
 - "Il positioning è marketing, e il marketing viene dopo che il prodotto è pronto." *(la sequenza invertita — il nemico del POV)*
 - "Tagliare significa perdere fatturato e clienti." *(ogni no letto come mancato ricavo — blocca l'azione anche dopo aver capito la diagnosi)*
-- "Serve una narrazione che unisca tutto quello che facciamo." *(chiedono al copy il lavoro che doveva fare la tesi: pillar 4)*
-- "La pipeline è ferma: ci servono due SDR." *(l'accumulo di headcount, la risposta più rapida e più costosa: pillar 5)*
-- "Il GTM lo costruiamo quando il prodotto è pronto." *(distribuzione come layer da attaccare sopra, non come decisione di prodotto: pillar 5)*
-- "Ci serve un CMO che metta ordine e coordini i fornitori." *(il mandato vecchio: governa i canali e non tocca nessuna leva di crescita: pillar 6)*
-- "Facciamo GTM engineering." *(quasi sempre significa outbound 2.0: tool e automation, zero decisioni di go-to-market: pillar 3)*
+- "Serve una narrazione che unisca tutto quello che facciamo." *(chiedono al copy il lavoro che doveva fare la tesi: A2, B1)*
+- "La pipeline è ferma: ci servono due SDR." *(l'accumulo di headcount, la risposta più rapida e più costosa: A1)*
+- "Il GTM lo costruiamo quando il prodotto è pronto." *(distribuzione come layer da attaccare sopra, non come decisione di prodotto: D1)*
+- "Ci serve un CMO che metta ordine e coordini i fornitori." *(il mandato vecchio: governa i canali e non tocca nessuna leva di crescita: materiale in "Fuori struttura" di `pov.md`)*
+- "Facciamo GTM engineering." *(quasi sempre significa outbound 2.0: tool e automation, zero decisioni di go-to-market: A1, forma stack)*
 
 ### Obiezioni prima di comprare (con risposta)
 
@@ -43,7 +45,7 @@ Revisione precedente: 2026-07 (concept "Accumulo", buyer analysis dal doc POV & 
 
 - "Come spiego in una frase un prodotto che fa cinque cose?" *(H1/H2 della hero + immagine)*
 - "In che ordine presento features e prodotti su homepage e deck?" *(wedge, lead product → architettura)*
-- "Faccio un brand unico o brand separati per i miei prodotti?" *(apre il pillar architettura)*
+- "Faccio un brand unico o brand separati per i miei prodotti?" *(C1, architetture di prodotto)*
 - "Il prodotto nuovo lo lancio come linea a sé o lo integro?" *(architettura)*
 - "Di tutto quello che facciamo, qual è la cosa che davvero ci distingue?" *(tipo di posizionamento)*
 - "La crescita non deve dipendere da me." *(→ prima rendi acquisizione/attivazione/conversione ripetibili e scritte, poi assumi sales/SDR/BDR)*

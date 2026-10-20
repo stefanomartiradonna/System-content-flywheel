@@ -4,10 +4,11 @@
 >
 > Non quattro framework affiancati, ma **una catena unica: ogni livello decide il successivo.**
 > Dentro: Dunford (architetture), Aaker (brand), Estner (anchor), Fletch (H1) — raccordati, non giustapposti.
-> Questo file è la fonte per pillar, infografiche e articoli di metodo.
+> Questo file è la fonte per i pillar C e D di `pov.md` (forma e business), per le infografiche e gli articoli di metodo.
 
-Ultima revisione: 2026-10-12 (aggiunto il binario parallelo distribuzione/revenue, dal pillar 5).
-Revisione precedente: 2026-07 (dal doc POV & Content Strategy, validato da Stefano).
+Ultima revisione: 2026-10-20 (riferimenti ai pillar riallineati alla struttura a 4 pillar di `pov.md`).
+Revisione precedente: 2026-10-12 (aggiunto il binario parallelo distribuzione/revenue, ora D1 e D4).
+Revisione ancora precedente: 2026-07 (dal doc POV & Content Strategy, validato da Stefano).
 
 ---
 
@@ -62,7 +63,7 @@ TESI DI PRODOTTO + POV
 **Perché è un binario e non un livello in fondo:** queste scelte determinano **cosa costruisci**, non come lo
 racconti. Un onboarding che vende da solo, un loop di invito, un report esportabile che il champion porta in
 comitato: sono feature con un owner e una roadmap, non campagne. Deciderle dopo significa trovare il prodotto
-già sbagliato. Vedi pillar 5 in [pov.md](pov.md).
+già sbagliato. Vedi D1 e D4 in [pov.md](pov.md).
 
 **Il raccordo che conta:** pricing e ACV decidono quale motion è sostenibile, e la motion ridefinisce l'ICP.
 Un ACV da 5K non regge una motion da 50K. Quando i due binari non si parlano, esce il caso classico:
@@ -79,7 +80,7 @@ positioning enterprise e prezzo self-serve, o il contrario.
 Se hai un solo prodotto, **non esiste differenza tra posizionamento dell'azienda e del prodotto**.
 Slack (pre-acquisizione) era Slack. Il founder che cerca un posizionamento aziendale separato
 "perché un giorno faremo tante cose" si incarta su una distinzione che non ha motivo di esistere ancora. (Dunford)
-→ Sintomo da Pillar 1: stai risolvendo un problema che non hai.
+→ Sintomo da B1 (tesi di prodotto): stai risolvendo un problema che non hai.
 
 **Corollario — il nome non è posizionamento.** Le startup pensano troppo ai nomi e confondono il cliente.
 Più prodotti sotto un brand unico con nomi descrittivi funziona (IBM: "DB2 Information Integrator" —
@@ -169,7 +170,7 @@ L'errore più comune — confondere *feature* con *prodotti*.
 - **Q2 — Problem articulation:** sa descrivere cosa vuole ottenere senza sapere che categoria lo risolve? Sì → *Use Case*. No → Q3.
 - **Q3 — Manual behavior:** la soluzione dominante è ancora manuale (Excel, Slack)? Sì → *Activity*. No → rivedi la comprensione del mercato.
 
-**La proof cambia con l'anchor** (sintomo da Pillar 1 se sbagliata):
+**La proof cambia con l'anchor** (sintomo da B1, tesi di prodotto, se sbagliata):
 - Activity → before/after, time-saved, trasformazione del workflow.
 - Use Case → workflow power + outcome ("ridotto X del Y%").
 - Product Category → comparative proof (battlecard, badge G2, "top X tools").

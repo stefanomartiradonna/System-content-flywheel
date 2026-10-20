@@ -37,8 +37,8 @@ stack, fornitori): comprare capacità invece di decidere. Audience primaria = fo
 POV-master + **4 pillar con 16 sotto-argomenti** (A Accumulo, B Direzione, C Forma, D Business) + lente AI.
 Sostituiscono i 6 pillar del 2026-10-12; il CMO-collante è in "Fuori struttura" di `pov.md`. C3 (anchor e
 messaggio per canale) da confermare. I sotto-argomenti nascono da scelta, non da evidenza misurata: vanno
-confrontati coi dati alla prossima review. `audience.md`, `content-strategy.md` e `metodo-catena.md` citano
-ancora la numerazione a 6 pillar: da allineare. Base 2026-07: concept "Accumulo" (doc POV & Content Strategy).
+confrontati coi dati alla prossima review. `audience.md`, `content-strategy.md` e `metodo-catena.md` sono riallineati
+alla nuova numerazione (A1-D6). Base 2026-07: concept "Accumulo" (doc POV & Content Strategy).
 **Client Intelligence**: struttura + template creati — 1 engagement estratto (LEVA #1)
 **Proof Library**: struttura creata — da popolare con risultati reali
 **References**: 5 autori analizzati (apr 2026) + pattern cross-autore

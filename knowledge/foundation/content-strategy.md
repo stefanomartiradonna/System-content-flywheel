@@ -5,8 +5,9 @@
 > Qui sta la strategia editoriale (cosa produrre, per quale stadio del buyer, agganciato a quale trigger).
 > Le regole di *forma* per piattaforma restano in `../platforms/linkedin/rules.md` e `../platforms/substack/rules.md`.
 
-Ultima revisione: 2026-10-12 (angle per i pillar nuovi 4, 5, 6 dentro i tipi Opinion e POV/Framework).
-Revisione precedente: 2026-07 (dal doc POV & Content Strategy, validato da Stefano).
+Ultima revisione: 2026-10-20 (etichette degli angle riallineate ai sotto-argomenti A1-D6 di `pov.md`).
+Revisione precedente: 2026-10-12 (angle per i pillar nuovi dentro i tipi Opinion e POV/Framework).
+Revisione ancora precedente: 2026-07 (dal doc POV & Content Strategy, validato da Stefano).
 
 ---
 
@@ -35,24 +36,24 @@ Far dire "aspetta, siamo noi". Contrarian: entra dalla loro lingua e ribalta.
 - "Ogni feature aggiunta per chiudere un deal vi ha tolto tre deal che non vedrete mai."
 - "Il vostro prodotto non è complesso. È confuso. La differenza vi costa il fatturato."
 - "Se non sapete dirmi cosa NON fate, non avete un posizionamento. Avete una lista."
-- "La distribuzione è il vostro collo di bottiglia. Due SDR non la risolvono, la nascondono finché c'è cassa." *(pillar 5)*
-- "In Italia 'GTM engineering' vuol dire outbound 2.0. C'è tutta l'engineering e zero GTM." *(pillar 3)*
-- "Il CMO che coordina le agenzie non serve più. Non perché è incapace: perché l'execution è diventata gratis." *(pillar 6)*
-- "Non vi serve una narrazione che unisca le features. Vi serve un criterio che ne abbia escluse metà." *(pillar 4)*
+- "La distribuzione è il vostro collo di bottiglia. Due SDR non la risolvono, la nascondono finché c'è cassa." *(A1 headcount, D1)*
+- "In Italia 'GTM engineering' vuol dire outbound 2.0. C'è tutta l'engineering e zero GTM." *(A1 stack)*
+- "Il CMO che coordina le agenzie non serve più. Non perché è incapace: perché l'execution è diventata gratis." *(fuori struttura, vedi `pov.md`)*
+- "Non vi serve una narrazione che unisca le features. Vi serve un criterio che ne abbia escluse metà." *(A2, B1)*
 
 ### 2. POV / FRAMEWORK — *Problem Aware → Solution Aware.*
 Far dire "si può risolvere, e ha un metodo". Dietro l'opinione c'è un sistema (→ [metodo-catena.md](metodo-catena.md)).
 - "Le 5 pressioni che gonfiano un prodotto (e quale sta gonfiando il vostro)." *(carosello/infografica)*
 - "Tesi di prodotto: il test del rifiuto. Se non ha mai ucciso una feature, non è una tesi."
-- "Single vs multi-product: come decidere se ti serve un brand o tre." *(apre il pillar architettura)*
+- "Single vs multi-product: come decidere se ti serve un brand o tre." *(C1)*
 - "Il positioning non è l'ultimo passo del marketing. È il primo passo del prodotto. La sequenza giusta."
 - "Che strategia di posizionamento usare? Head-to-head col leader? Big fish smaller pond? ..."
 - "Come si presenta un prodotto che fa 5 cose: l'ordine non è un dettaglio, è la strategia."
-- "Il test della spina dorsale: cosa accomuna le ultime 5 cose che hai costruito?" *(pillar 4, format autodiagnostico pronto)*
-- "Il test della distribuzione: cosa, nel prodotto, acquisisce il prossimo cliente quando nessuno spinge?" *(pillar 5)*
+- "Il test della spina dorsale: cosa accomuna le ultime 5 cose che hai costruito?" *(A2, format autodiagnostico pronto)*
+- "Il test della distribuzione: cosa, nel prodotto, acquisisce il prossimo cliente quando nessuno spinge?" *(D1)*
 - "Le 4 forme dell'accumulo: features, headcount, stack, fornitori." *(carosello/infografica, apre il master nuovo)*
-- "Prima di assumere il primo sales: le tre cose che devono stare fuori dalla tua testa." *(pillar 5, prescrittivo)*
-- "Il business case che il marketing deve saper fare prima di aggiungere una feature." *(pillar 6, metodo Tharin)*
+- "Prima di assumere il primo sales: le tre cose che devono stare fuori dalla tua testa." *(A1 headcount, D1, prescrittivo)*
+- "Il business case che il marketing deve saper fare prima di aggiungere una feature." *(D3, metodo Tharin)*
 
 ### 3. CASE / TEARDOWN — *Solution Aware → Comparing.*
 Inquadrare ogni teardown sul MIO framework, non come analisi generica.
@@ -83,10 +84,10 @@ I trigger (→ dettaglio in [audience.md](audience.md)) decidono l'angolo del pe
   Obiettivo primario della content strategy.
 - Le **domande ricorrenti del buyer** (in audience.md) sono titoli di contenuto pronti.
 
-## 4. Lente AI (trasversale, mai pillar)
+## 4. Lente AI (trasversale, mai pillar; è la tesi di B2 e B3)
 
-L'AI alza la posta dentro ogni pillar (3 meccanismi in [pov.md](pov.md)): costruire costa zero,
-il fossato delle feature è azzerato, il buyer annega nel rumore. Messaggio: **l'AI non crea il problema
+L'AI alza la posta dentro ogni pillar (4 meccanismi in [pov.md](pov.md)): costruire costa zero,
+il fossato delle feature è azzerato, il buyer annega nel rumore, l'execution di marketing costa zero. Messaggio: **l'AI non crea il problema
 dell'accumulo, lo rende mortale.** Mai usare "AI-powered" come differenziatore — né per me né nei consigli.
 
 ## 5. Regole di produzione (dal sistema flywheel)
