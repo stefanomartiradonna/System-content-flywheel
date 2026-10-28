@@ -115,6 +115,44 @@ Ogni entry contiene:
 
 ---
 
+## 2026-10 — Substack — Architetture di Posizionamento (funzione o prodotto?)
+
+**URL**: https://stefanopm.substack.com/p/architettura-di-posizionamento
+**File di lavoro**: `articoli/Architetture-Capitolo-Prodotti-o-Feature-2026-10.md` (solo il capitolo centrale; il pezzo completo è stato assemblato in sessione)
+**Tipo**: articolo di metodo
+**Tema**: architetture di posizionamento, feature vs prodotto
+**Serie**: quarto della serie sulle fondamenta. Segue: (1) quando inserire il PMM, (2) le 4 aree strategiche, (3) la Tesi di Prodotto. È il primo pezzo che entra nella scatola "Posizionamento".
+**Stato**: pubblicato il 2026-10-28.
+
+**Hook**:
+> Oggi con questo articolo affronteremo un argomento, "L'architettura di Posizionamento"; lo so benissimo, appena lo leggerete, direte: "uhmm sì interessante proprio... ma che è? perché dovrei conoscerlo?"
+
+**Pattern usato**:
+- Tipo hook: **obiezione del lettore messa in bocca al lettore** prima che la pensi. Nuovo per la newsletter, non è il reframe diagnostico (H01) dei post LinkedIn.
+- Struttura: recap serie → indice → perché non è roba da enterprise → le 5 domande rimandate → esempio unico inventato (Coperto) → test a due domande → casi applicati → prova del nove → quando una funzione diventa prodotto → "prodotto possibile" ≠ prodotto → cosa cambia a valle → quando il posizionamento cambia (3 sì / 4 no) → le 3 architetture → box riassuntivo a 10 casi → teaser + domanda nei commenti
+- **Esempio unico inventato per tutta la lunghezza del pezzo.** Prima volta. Rompe la regola "usa solo aziende vere" della style guide, scelta deliberata per tenere un filo solo su un pezzo lungo e per parlare anche a chi non è del settore.
+- Voce: molte intrusioni dell'autore dichiarate ("non te lo spoilero adesso", "lo so potevo organizzare meglio il testo, ma è andata così"). Registro più parlato del solito.
+- Cinque infografiche intercalate come riassunti di sezione, non come decorazione.
+- CTA finale: domanda aperta nei commenti su quale azienda analizzare nel prossimo pezzo. Nessun hard sell.
+
+**Cosa testa**:
+- Se un esempio inventato tiene l'attenzione quanto un teardown di azienda vera su un pezzo lungo (contro la regola "sempre aziende reali")
+- Se l'autoironia sull'organizzazione del testo costa autorevolezza o la compra
+- Se la domanda nei commenti genera risposte vere (primo tentativo di co-decidere il contenuto successivo con i lettori)
+
+**Fondamenta usate**: Dunford (le tre architetture, il criterio del valore differenziante), POV-master "il tuo problema non è il copy, è una decisione di prodotto mai presa", nemico "accumulo".
+
+**Performance** *(da aggiornare dopo 7gg)*:
+- Aperture: _
+- Click: _
+- Nuovi iscritti: _
+- Commenti: _
+- Risposte alla domanda finale sull'azienda da analizzare: _
+
+**Note post-pubblicazione**: *(da compilare)*
+
+---
+
 ## Template per nuovi post
 
 ```markdown
