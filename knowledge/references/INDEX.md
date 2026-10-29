@@ -19,8 +19,9 @@ Aggiungi qui gli autori che vuoi studiare, con note sul perché ti interessano.
 | April Dunford | linkedin.com/in/aprildunford | Positioning B2B, architetture multi-product — fonte primaria del metodo (pillar architetture) | No — solo radar | ✓ |
 | Rob Kaminski | linkedin.com/in/heyrobk | Positioning & messaging B2B (Fletch) — fonte framework H1/homepage, contenuti visual | No — solo radar | ✓ |
 
-**Radar settimanale** = monitorato ogni domenica dalla skill `content-radar` (report su Google Doc,
-log in `radar/log.md`). La watchlist operativa sta in `~/.claude/skills/content-radar/references/watchlist.md`.
+**Radar settimanale** = letto ogni lunedì dalla skill `content-cockpit` (Fase 5, report su Google Doc).
+La watchlist operativa sta in `~/.claude/skills/content-cockpit/references/watchlist.md`. I cicli fino al
+25/10/2026, quando il radar era una skill separata, sono in `radar/log.md`.
 
 ---
 

@@ -65,7 +65,7 @@ Caricare tutto porta a context pollution — l'AI infila riferimenti che il pezz
 | Feedback su un mio pezzo | `newsletter-writer` Modalità 3 | `knowledge/foundation/pov.md` + `knowledge/posts/` + `knowledge/hypotheses/active.md` |
 | Estrai insight da un engagement | nessuna skill (workflow in INDEX) | `knowledge/client-intelligence/INDEX.md` |
 | Scrivi Company Teardown | `company-teardown` | `knowledge/companies/` (se esiste) |
-| Radar bisettimanale contenuti (autori + temi) | `content-radar` | `knowledge/foundation/pov.md` + `content-strategy.md` + `audience.md` + `knowledge/hypotheses/active.md` — output: Google Doc + riga in `radar/log.md` |
+| Routine del lunedì: i miei post, cosa funziona, call, autori, news tech, liste di temi (anche solo "radar autori") | `content-cockpit` | quello che elenca la skill (Fase 0), output: Google Doc nella cartella Drive `Content Cockpit` + copia .md in `claude-private-refs` |
 
 Questo repo è **solo "da 0 al PMF"**. Marketing Ignorante (testata MarkeThings) ha il suo repo,
 `marketing-ignorante-brain`, con la sua voce e la sua skill: fino a settembre 2026 viveva qui
@@ -87,7 +87,7 @@ Ogni deliverable va salvato nella cartella dedicata al suo tipo. Non mischiarli 
 | Post LinkedIn (già pubblicati) | `post-pubblicati/` | `.md` |
 | Articoli Substack (bozze) | `articoli/` (crea se manca) | `.md` |
 | Company Teardown (rubrica newsletter) | `articoli/` | `.md` |
-| Content Radar (report bisettimanale) | Google Doc + log in `radar/log.md` | Doc, `.md` |
+| Content Cockpit (report del lunedì) | Google Doc in Drive `Content Cockpit` + `claude-private-refs/linkedin/cockpit/` | Doc, `.md` |
 
 **Workflow post LinkedIn:**
 1. Nascita di un'idea → file in `post-idee/` (anche solo un titolo o un hook)
@@ -144,10 +144,12 @@ Quando edito una bozza e dico "registra i miei edit":
 - **Intelligence → multiple outputs**: una sola estrazione da engagement alimenta articolo + post + carosello E affina il positioning a monte (`foundation/`). Non è un problema di produzione, è distribuzione di intelligence. La review che promuove i pattern in `foundation/` si fa ogni 3-6 mesi: l'evidenza fa emergere, Stefano decide.
 - **Human gate all'outline**: per gli articoli Substack, la revisione umana sta al livello strategico (outline/angle), non al copy-editing. Approvato l'outline, il writer scrive senza re-improvvisare la sostanza.
 
-**Content Radar (regola):** il radar bisettimanale (`content-radar`, ogni ~15 giorni o manuale)
-produce report e PROPONE candidati per la knowledge (sezione "Segnali per la knowledge" nel Doc),
-ma **non modifica mai** `references/`, `hypotheses/` o `foundation/` in automatico — la promozione
-la decide Stefano. Il radar committa solo `radar/log.md`.
+**Content Cockpit (regola):** la routine del lunedì (`content-cockpit`, che dal 29/10/2026 assorbe
+anche il radar degli autori) aggiorna da sola solo i suoi file nel repo privato e l'evidenza pro o
+contro le ipotesi in `hypotheses/active.md`. Per tutto il resto PROPONE (sezione "Segnali per la
+knowledge" nel Doc): **non modifica mai** `references/`, `foundation/`, la watchlist o `mio-stile.md`,
+e non promuove un'ipotesi a regola. La promozione la decide Stefano. `radar/log.md` è l'archivio chiuso
+dei cicli del vecchio radar, non si aggiorna più.
 
 **Non chiedere autorizzazione per aggiornare i file `knowledge/`.
 Chiedi solo se devi modificare questo CLAUDE.md o i file nelle cartelle `platforms/`.**

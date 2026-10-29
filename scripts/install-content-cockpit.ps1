@@ -185,11 +185,10 @@ Titolo '4. Pezzi della routine'
 
 $attesi = @(
     @{ Dove = $ClaudeHome;      File = 'skills\content-cockpit\SKILL.md';            Cosa = 'skill content-cockpit' },
-    @{ Dove = $ClaudeHome;      File = 'skills\content-radar\SKILL.md';              Cosa = 'skill content-radar' },
+    @{ Dove = $ClaudeHome;      File = 'skills\content-cockpit\references\watchlist.md'; Cosa = 'watchlist degli autori' },
     @{ Dove = $ClaudeHome;      File = 'skills\linkedin-viral-post-writer\SKILL.md'; Cosa = 'skill linkedin-viral-post-writer' },
     @{ Dove = $Flywheel;        File = 'CLAUDE.md';                                  Cosa = 'istruzioni del progetto' },
     @{ Dove = $Flywheel;        File = 'knowledge\INDEX.md';                         Cosa = 'knowledge base' },
-    @{ Dove = $Flywheel;        File = 'radar\log.md';                               Cosa = 'log del radar' },
     @{ Dove = $Flywheel;        File = 'scripts\prompt-content-cockpit.md';          Cosa = 'prompt della routine' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\parse_snapshot.py';                 Cosa = 'script dei dati' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\metrics.csv';                       Cosa = 'numeri dei post' },
@@ -197,6 +196,9 @@ $attesi = @(
     @{ Dove = $CartellaPrivata; File = 'linkedin\voce-analisi.md';                   Cosa = 'analisi della voce' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\temi.csv';                          Cosa = 'temi dei post' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\conversions.md';                    Cosa = 'registro delle conversioni' },
+    @{ Dove = $CartellaPrivata; File = 'linkedin\cosa_funziona.py';                  Cosa = 'ricalcolo di cosa funziona' },
+    @{ Dove = $CartellaPrivata; File = 'linkedin\scelte.csv';                        Cosa = 'registro delle scelte sulle liste' },
+    @{ Dove = $CartellaPrivata; File = 'linkedin\esclusi.csv';                       Cosa = 'post esclusi dai confronti' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\cockpit\README.md';                 Cosa = 'cartella dei report' }
 )
 $mancanti = 0

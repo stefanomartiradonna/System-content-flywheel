@@ -1,8 +1,12 @@
 # La routine del lunedì: dove vive e come si installa
 
-Ogni lunedì alle 8:00 Claude prepara il report sui contenuti: misura i post LinkedIn della settimana
-matura, legge sito e conversioni, e chiude con due liste tra cui scegliere, 5 notizie tech da leggere
-con i propri pillar e 5 angoli dagli autori di riferimento. Poi si ferma e aspetta la scelta.
+Ogni lunedì alle 8:00 Claude prepara il report sui contenuti, su Google Doc: misura i post LinkedIn
+della settimana matura e ricalcola cosa funziona su tutto lo storico, legge sito, conversioni e call,
+legge i post degli autori di riferimento, e chiude con due liste tra cui scegliere, 5 notizie tech da
+leggere con i propri pillar e fino a 5 angoli dagli autori. Poi si ferma e aspetta la scelta.
+
+È l'unica routine dei contenuti: il radar degli autori, che fino a ottobre 2026 aveva una skill e un
+avvio suoi, ora è una fase del lunedì.
 
 Questa pagina serve a una cosa: rimettere in piedi la routine, identica, su un computer nuovo
 partendo solo da GitHub.
@@ -14,11 +18,13 @@ partendo solo da GitHub.
 | Pezzo | Dove | Visibilità |
 |---|---|---|
 | Cosa fa la routine, fase per fase | repo `claude-brain`, `skills/content-cockpit/SKILL.md` | pubblico |
-| Le altre skill che usa (`content-radar`, `linkedin-viral-post-writer`) | repo `claude-brain`, `skills/` | pubblico |
+| Autori e temi da leggere | repo `claude-brain`, `skills/content-cockpit/references/watchlist.md` | pubblico |
+| La skill di scrittura che usa (`linkedin-viral-post-writer`) | repo `claude-brain`, `skills/` | pubblico |
 | Il prompt con cui parte | questo repo, `scripts/prompt-content-cockpit.md` | pubblico |
 | Installer e lancio a mano | questo repo, `scripts/` | pubblico |
-| Knowledge, ipotesi, log del radar | questo repo, `knowledge/` e `radar/` | pubblico |
-| Numeri dei post, testi, report, bozze, frasi dalle call | repo `claude-private-refs` | **privato** |
+| Knowledge e ipotesi | questo repo, `knowledge/` (`radar/log.md` è l'archivio chiuso del vecchio radar) | pubblico |
+| Numeri dei post, testi, report, bozze, frasi dalle call, scelte sulle liste, ricalcolo di cosa funziona | repo `claude-private-refs` | **privato** |
+| Il report da leggere | Google Drive, cartella `Content Cockpit` | privato |
 | Quando parte (lunedì alle 8:00) | task pianificato dentro l'app Claude | solo sul computer |
 | Accessi: Claude, GitHub, LinkedIn, connettori | account e browser | mai su GitHub |
 
@@ -95,8 +101,5 @@ che chiede: così i lunedì successivi non si ferma in attesa di un permesso.
 
 ## Cosa non copre
 
-- Il radar degli autori ha anche un suo avvio separato (un'attività pianificata di Windows che
-  lancia `launch-content-radar.ps1`). L'installer non la crea: la routine del lunedì lancia già il
-  radar da sola quando sono passati 12 giorni dall'ultimo ciclo.
 - Chiavi e token non stanno su GitHub, in nessuno dei tre repo. I collegamenti che ne hanno bisogno
   vanno riconfigurati a mano.
