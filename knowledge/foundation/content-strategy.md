@@ -5,8 +5,10 @@
 > Qui sta la strategia editoriale (cosa produrre, per quale stadio del buyer, agganciato a quale trigger).
 > Le regole di *forma* per piattaforma restano in `../platforms/linkedin/rules.md` e `../platforms/substack/rules.md`.
 
-Ultima revisione: 2026-10-20 (etichette degli angle riallineate ai sotto-argomenti A1-D6 di `pov.md`).
-Revisione precedente: 2026-10-12 (angle per i pillar nuovi dentro i tipi Opinion e POV/Framework).
+Ultima revisione: 2026-11-08 (nuova §2bis: mix dei contenuti per categoria, asse ortogonale ai 5
+tipi del §2, adattato dal mix 2026 di Pierre Herubel).
+Revisione precedente: 2026-10-20 (etichette degli angle riallineate ai sotto-argomenti A1-D6 di `pov.md`).
+Revisione ancora precedente: 2026-10-12 (angle per i pillar nuovi dentro i tipi Opinion e POV/Framework).
 Revisione ancora precedente: 2026-07 (dal doc POV & Content Strategy, validato da Stefano).
 
 ---
@@ -71,6 +73,52 @@ Un format ripetibile riconoscibile (recurring content structure), non un logo. C
 - **"Il sintomo che mente"** — rubrica fissa: ogni volta un sintomo diverso (homepage, deck, ads, churn) → stessa rivelazione (la radice).
 - **"Teardown dell'accumulo"** — griglia fissa di analisi con la lente delle 5 pressioni.
 - **"Prima / dopo"** — template a due colonne, sempre quello.
+
+## 2bis. Il mix dei contenuti — categorie trasversali
+
+Asse **ortogonale** ai 5 tipi del §2: quello sopra dice a che stadio di awareness parla un pezzo,
+questo dice **che cosa comunica**. Ogni post porta entrambe le etichette, non si sostituiscono a
+vicenda. Nata dal mix 2026 di Pierre Herubel (Educational 40% / Thought Leadership 15% / Build in
+Public 15% / Personal Brand 15% / Offer 15%), adattata al contesto di Stefano: fractional senza
+prodotto proprio, dove il metodo stesso è l'offerta, non un'agenzia content-first.
+
+### Le 5 categorie
+
+- **Educational** — metodo denso, framework riutilizzati da articoli Substack. Coincide quasi
+  sempre con POV/FRAMEWORK.
+- **Thought Leadership** — reazione a notizie e mercato, opinioni nette. Coincide quasi sempre con
+  OPINION, a volte con CASE/TEARDOWN quando il teardown è su un'azienda terza.
+- **Personal Brand** — percorso personale, valori, genesi della tesi. Coincide con BACKSTORY.
+- **Build in Public** — progressi *recenti e reali*, non genesi. Fonte principale: il lavoro
+  settimanale di Stefano — inclusa l'evoluzione del sistema di content flywheel stesso (skill che
+  costruisce, decisioni di knowledge management), materiale raramente sfruttato oggi.
+- **Offer** — disponibilità, risultati clienti. Mai "compra da me" diretto: coerente con la regola
+  di voce "mai da guru". Si appoggia spesso a CASE/TEARDOWN come prova.
+
+### Mapping indicativo con i 5 tipi del §2 (non rigido)
+
+| Tipo (§2) | Categoria mix più probabile | Nota |
+|---|---|---|
+| OPINION | Thought Leadership | quasi sempre |
+| POV/FRAMEWORK | Educational | quasi sempre |
+| CASE/TEARDOWN | Thought Leadership *o* Offer | dipende se il caso è di terzi (TL) o un proprio risultato cliente (Offer) |
+| BACKSTORY | Personal Brand | quasi sempre |
+| SIGNATURE | qualsiasi | il formato è trasversale, la categoria dipende dal contenuto di quel numero |
+
+### Target (default, su finestra rolling 8-12 settimane — mai su una singola settimana)
+
+**Educational 40% · Thought Leadership 25% · Personal Brand 15% · Build in Public 10% ·
+Offer 10%.**
+
+Più sbilanciato su Educational/Thought Leadership rispetto a Herubel (65% contro il suo 55%):
+il metodo di Stefano è l'offerta, ha meno bisogno di "dimostrarsi" via Build in Public/Personal
+Brand quanto un content-first puro. Offer tenuto basso e in formato soft (5-10%, mai hard-sell):
+il canale lavora già con un rapporto di 0,22% di conversione sito/impressioni (vedi content-cockpit
+Fase 3), vendere apertamente su LinkedIn non è mai stato il meccanismo che converte per Stefano —
+è il DM da founder dopo un post che scala un POV.
+
+Si misura sullo storico di `temi.csv` (colonna `categoria_mix`) nel report settimanale del
+cockpit, non qui: questo file fissa le definizioni e il target, il cockpit fa il conto.
 
 ## 3. Trigger come motore degli angle
 

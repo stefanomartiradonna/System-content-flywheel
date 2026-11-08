@@ -151,3 +151,6 @@ Substack = hub (metodo per intero) → LinkedIn = distribuzione (spacchettamento
 5 tipi di contenuto (Opinion / POV-Framework / Case-Teardown / Backstory / Signature) mappati sugli
 stadi di awareness del buyer. I trigger guidano gli angle: bilanciare dolore ed evento positivo —
 il dolore fa scrollare, l'evento positivo (round, lancio, nuovo hire) porta lead lucidi con budget.
+Secondo asse, ortogonale al primo: il mix dei contenuti per categoria (Educational 40% / Thought
+Leadership 25% / Personal Brand 15% / Build in Public 10% / Offer 10%, target su finestra rolling,
+non sulla singola settimana) — dettaglio in `content-strategy.md` §2bis.
