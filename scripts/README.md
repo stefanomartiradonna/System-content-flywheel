@@ -2,8 +2,10 @@
 
 Ogni lunedì alle 8:00 Claude prepara il report sui contenuti, su Google Doc: misura i post LinkedIn
 della settimana matura e ricalcola cosa funziona su tutto lo storico, legge sito, conversioni e call,
-legge i post degli autori di riferimento, e chiude con due liste tra cui scegliere, 5 notizie tech da
-leggere con i propri pillar e fino a 5 angoli dagli autori. Poi si ferma e aspetta la scelta.
+legge gli autori di riferimento su LinkedIn/Substack/X/Instagram e cerca nuovi creator su X, e chiude
+con tre liste tra cui scegliere: 5 notizie tech da leggere con i propri pillar, fino a 5 angoli dagli
+autori e fino a 3 candidati Build in Public/Personal Brand/Offer dalla propria settimana. Riporta
+anche il mix dei contenuti per categoria, reale contro target. Poi si ferma e aspetta la scelta.
 
 È l'unica routine dei contenuti: il radar degli autori, che fino a ottobre 2026 aveva una skill e un
 avvio suoi, ora è una fase del lunedì.

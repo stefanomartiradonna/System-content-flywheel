@@ -13,39 +13,48 @@ POI: carica la skill content-cockpit e confermami in una riga che l'hai letta, c
 titolo della Fase 9. Se non riesci a caricarla, FERMATI e dimmelo invece di improvvisare: il workflow
 vive li dentro, e senza quel file le fasi elencate qui sotto non esistono da nessuna parte.
 
-Le 11 fasi, solo come indice per sapere cosa aspettarsi. Le istruzioni vere stanno nella skill e
-vincono su questo elenco:
+Le 11 fasi, solo come indice per sapere cosa aspettarsi: l'elenco e le descrizioni qui sotto possono
+invecchiare, la skill no. Le istruzioni vere stanno nella skill e vincono sempre su questo elenco: se
+leggi qui "due liste" o "un canale" e la skill dice altro, segui la skill e dimmi che questo file va
+aggiornato invece di seguire questo indice.
 
   Fase 0  Contesto: git pull, legge foundation/, hypotheses, craft, voce-analisi, temi.csv,
           cosa-funziona.md, scelte.csv e le liste degli ultimi due report (per non riproporre
           gli stessi angoli)
   Fase 1  Aggiorna il dataset: snapshot LinkedIn da Chrome, poi parse_snapshot.py che unisce i
-          post nuovi allo storico (non lo sovrascrive), tagga i post nuovi in temi.csv, aggiorna
-          scelte.csv e lancia cosa_funziona.py che ricalcola cosa funziona su tutto lo storico
+          post nuovi allo storico (non lo sovrascrive), tagga i post nuovi in temi.csv (incluso
+          categoria_mix), aggiorna scelte.csv e lancia cosa_funziona.py che ricalcola cosa
+          funziona su tutto lo storico
   Fase 2  KPI dei post sulla finestra matura, migliore della settimana, trend, anti-rumore
   Fase 3  PostHog: visite al sito e click sulle CTA (attenzione al project, punto 1 sotto)
   Fase 4  Conversioni manuali: legge conversions.md (i DM, che nessun sistema vede)
-  Fase 5  Autori della watchlist, OGNI settimana, sulla finestra dall'ultimo report a oggi, piu'
-          i temi core sul web
+  Fase 5  Autori della watchlist, OGNI settimana, su fino a quattro canali ciascuno (LinkedIn,
+          newsletter/Substack propria, X, Instagram) sulla finestra dall'ultimo report a oggi,
+          piu' i temi core sul web e il "radar X" per nuovi creator su brand/SaaS/AI/GTM.
+          COPERTURA OBBLIGATORIA: se non fai in tempo a passare per ogni autore della tabella,
+          dichiaralo per nome nel report invece di lasciarlo intuire da un'assenza silenziosa
   Fase 6  Temi della settimana da quattro fonti:
           (a) la mia settimana: commit, file nuovi, mail, calendario e le CALL CON I CLIENTI
               lette da Granola (domande che tornano, parole loro, sintomo prima della diagnosi)
               -> anonimizzazione obbligatoria all'ingresso: solo ruolo, settore, scala
+              -> alimenta anche la Lista C (Build in Public/Personal Brand/Offer), non solo contesto
           (b) il mercato: gli autori della watchlist e le conversazioni sui temi core
           (c) l'archivio: post sopra la mediana di 6+ mesi fa da aggiornare o fondere
           (d) le mosse delle aziende tech negli ultimi 7-10 giorni, cercate sul web: la notizia
               e' il pretesto per spiegare un mio pillar su un caso famoso, numeri verificati
-  Fase 7  Due liste: 5 notizie tech e fino a 5 angoli dagli autori, registrate in scelte.csv
-          -> QUI TI FERMI E ASPETTI
+  Fase 7  Tre liste: 5 notizie tech, fino a 5 angoli dagli autori, fino a 3 candidati Build in
+          Public/Personal Brand/Offer dalla mia settimana, registrate in scelte.csv (con
+          categoria_mix per ogni voce) -> QUI TI FERMI E ASPETTI
   Fase 8  Scrive solo quello che ho scelto, con brief immagine e link UTM
   Fase 9  Auto-miglioramento: impara dalle mie correzioni, dalle previsioni verificate e da quali
-          voci delle liste scelgo
-  Fase 10 Output: report su GOOGLE DOC (cartella Content Cockpit su Drive), copia .md nel repo
-          privato in linkedin/cockpit/, poi committa
+          voci delle liste scelgo (incluso l'asse categoria mix)
+  Fase 10 Output: report su GOOGLE DOC (cartella Content Cockpit su Drive) con anche il mix dei
+          contenuti reale contro target e il radar X, copia .md nel repo privato in
+          linkedin/cockpit/, poi committa
 
-Fermati alla Fase 7 e aspetta. Proponi le due liste (5 notizie tech, fino a 5 angoli dagli autori) e NON
-scrivere i post finche non ti dico cosa sviluppare. Scrivere pezzi che poi non pubblico butta via il
-lavoro e mi toglie il gate editoriale.
+Fermati alla Fase 7 e aspetta. Proponi le tre liste (5 notizie tech, fino a 5 angoli dagli autori,
+fino a 3 candidati Build in Public/Personal Brand/Offer) e NON scrivere i post finche non ti dico cosa
+sviluppare. Scrivere pezzi che poi non pubblico butta via il lavoro e mi toglie il gate editoriale.
 
 I cinque punti dove si sbaglia piu facilmente:
 
