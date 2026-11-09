@@ -80,6 +80,13 @@ I cinque punti dove si sbaglia piu facilmente:
    esistenti segnando cosa e fermo alla settimana scorsa. Non inventare numeri e non fingere che il
    dato sia fresco.
 
+6. Fase 5 (autori) e BLOCCANTE da 2026-11-09, diverso dal punto 5: se non riesci a passare per ogni
+   autore della watchlist su ogni suo canale (Chrome giu senza fallback, o tempo finito a meta tabella),
+   NON proseguire a Fase 6/7 e NON scrivere un report come se la copertura fosse completa. Manda una
+   notifica push con cosa e bloccato e cosa mi serve per sbloccarlo, poi consegna comunque un report
+   parziale con le Fasi 0-4 (KPI, mix, sito, conversioni, gia' indipendenti dagli autori) intitolato
+   "parziale, fermato a Fase 5". Dettaglio completo nella skill, sezione "Fase 5 e bloccante".
+
 Tre regole su cosa resta privato:
 
 - Nei repo pubblici (System-content-flywheel e claude-brain) non entrano nomi di clienti, di persone
