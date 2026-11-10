@@ -2,7 +2,8 @@
 
 > Vista derivata di [knowledge-base.md](knowledge-base.md) §2. Modifica prima il master, poi questo file.
 
-Ultima revisione: 2026-07 (concept "Accumulo" — validato da Stefano dal doc POV & Content Strategy).
+Ultima revisione: 2026-11-10 (profondità come reinvestimento di quello che si taglia, Product Slop).
+Revisione precedente: 2026-07 (concept "Accumulo", validato da Stefano dal doc POV & Content Strategy).
 
 ---
 
@@ -32,6 +33,8 @@ Lavoro su tesi di prodotto, POV, positioning, architettura e strategia di posizi
 per **scegliere e tagliare**, non per comunicare meglio. La narrazione chiara non devi inventarla:
 è la conseguenza automatica quando il prodotto smette di voler essere tutto. Prima si fa chiarezza
 sul prodotto, poi la comunicazione si scrive da sola.
+Non solo tagliare: la capacità che il taglio libera torna sulla **profondità**, cioè sul problema che il cliente
+paga. In un mercato dove tutti allargano con gli stessi strumenti (Product Slop), la differenza la fa chi va più a fondo.
 
 ## Insight unico che porto
 

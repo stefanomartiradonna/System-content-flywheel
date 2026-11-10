@@ -8,11 +8,14 @@
 > POI si propagano i derivati. Mai modificare un derivato senza riflettere il cambiamento qui.
 > Mantieni in un posto, consuma in molti. Senza questa disciplina la voce torna a divergere su 15 file.
 
-Ultima revisione: 2026-10-20 (i pillar passano da 6 a 4, con 16 sotto-argomenti: A Accumulo, B Direzione,
+Ultima revisione: 2026-11-10 (metodo di Emily Segal, sintomo psicologico e naming, applicato al POV: Product Slop come forma AI dell'accumulo, i due danni
+incomprensibile e indistinguibile, fast fashion contro capsule collection, profondità come reinvestimento.
+A3 e B3 riscritti, lente AI da 4 a 6 meccanismi. Input di Stefano).
+Revisione precedente: 2026-10-20 (i pillar passano da 6 a 4, con 16 sotto-argomenti: A Accumulo, B Direzione,
 C Forma, D Business. C3 da confermare. Input di Stefano).
-Revisione precedente: 2026-10-12 (allargamento del nemico "accumulo" alle 4 forme + 3 pillar nuovi:
+Revisione ancora precedente: 2026-10-12 (allargamento del nemico "accumulo" alle 4 forme + 3 pillar nuovi:
 tesi come spina dorsale, distribuzione dentro il prodotto, fine del CMO-collante).
-Revisione ancora precedente: 2026-07 (concept "Accumulo", dal doc POV & Content Strategy).
+Prima revisione: 2026-07 (concept "Accumulo", dal doc POV & Content Strategy).
 
 ---
 
@@ -40,6 +43,7 @@ come li racconti, ma decidendo **cosa il prodotto è e cosa non è**. Il positio
 di prodotto e di business (quella che taglia, non quella che racconta): decidi A CHI vendere, COSA, a QUANTO →
 quindi il tuo SOM, quindi le tue revenue. Differenziante: **strategia e operatività contemporaneamente**,
 partendo da goal, KPI e revenue del business — mai piani che la startup non può mettere in atto.
+Non solo tagliare: la capacità che il taglio libera torna sulla profondità, cioè sul problema che il cliente paga.
 
 ---
 
@@ -58,6 +62,22 @@ coordina le agenzie. Ogni aggiunta, da sola, è sensata. La somma è un'azienda 
 di una tesi) · di **fornitori** (agenzie, più il collante che le governa). Stesso meccanismo in tutte:
 **comprare capacità invece di prendere una decisione.**
 
+**Nell'era AI l'accumulo fa due danni.** Il primo c'era già: il prodotto diventa **incomprensibile**. Il secondo,
+il me-too, l'AI lo rende più veloce: il prodotto diventa **indistinguibile**, perché chi non ha una tesi lascia
+decidere il default, e oggi il default è la risposta media degli strumenti che usano tutti (stesse proposte di
+roadmap, stesso copy, stessi playbook di distribuzione). Questo danno ha un nome: **Product Slop**, la larghezza
+prodotta senza una tesi che la selezioni. Non è una quinta forma: è quello che le quattro producono con gli
+strumenti di tutti. Esclude le feature table stakes (la parità che la categoria richiede) e l'AI usata per
+eseguire una tesi già decisa. Non è un POV anti-AI: il bersaglio è lasciare all'AI la decisione, non usarla.
+È il fast fashion del software: armadio pieno, niente da mettersi. Guardrail: la larghezza funziona per chi ha
+la scala per sostenerla (Shein, e nel B2B le suite degli incumbent su cui i CFO consolidano); una startup che si
+allarga combatte sul loro campo. La risposta è la capsule collection: poche cose, a fondo, per un ICP preciso.
+Il prezzo più alto viene dal valore sul problema e da poche alternative credibili, non dal numero di funzioni.
+Guardrail: capsule non vuol dire piccolo (si scala per profondità, non per larghezza); la profondità si paga solo
+su un problema doloroso con budget; dove il modulo della suite basta, il CFO consolida.
+Perché il founder ci cade (nella forma features): saper costruire era il suo vantaggio, ora lo sanno fare tutti,
+e il riflesso è costruire di più per dimostrare di essere ancora avanti.
+
 **Le 6 cose mai decise** (il livello sopra che manca): ① tesi di prodotto · ② POV · ③ positioning ·
 ④ architettura di posizionamento · ⑤ strategia di posizionamento · ⑥ modello di distribuzione e di revenue.
 Non sono lavoro di marketing da fare alla fine: sono decisioni di prodotto e di business da prendere all'inizio,
@@ -68,11 +88,11 @@ perché determinano cosa costruisci, in che ordine, e cosa rifiuti.
 - **A. Accumulo (il problema)**
   - A1. Crescita per accumulo: il modo di default di rispondere a un problema è aggiungere. Ogni aggiunta ha senso, la somma no.
   - A2. Perdere la narrazione totale: se non sai dire come si legano le cose che fai, il buyer non lo farà per te. È un sintomo, non un problema di copy.
-  - A3. POV e posizionamento annacquati: a forza di dire sì a tutti, ogni messaggio diventa tiepido.
+  - A3. POV e posizionamento annacquati e omologati (Product Slop): a forza di dire sì a tutti, ogni messaggio diventa tiepido; a forza di usare gli stessi strumenti di tutti, il prodotto diventa uguale agli altri.
 - **B. Direzione (decidere prima di costruire)**
   - B1. Tesi di prodotto: cos'è, a cosa serve, come si costruisce.
   - B2. POV forte in era AI: le aziende non cercano solo un tool, cercano chi dica loro dove sta andando il settore.
-  - B3. Velocità con direzione: costruire e testare costa quasi zero, quindi il vantaggio è taste e giudizio su cosa costruire.
+  - B3. Velocità con direzione e profondità: costruire e testare costa quasi zero, quindi il vantaggio è taste e giudizio su cosa costruire; la capacità liberata va in profondità sul problema che il cliente paga, non in larghezza.
   - B4. Fondamenta prima degli asset: tesi, POV e positioning vengono prima di messaging, asset e canali.
 - **C. Forma (da direzione a posizionamento e architettura)**
   - C1. Architetture di prodotto: cosa sono, quale usare e quando.
@@ -89,10 +109,13 @@ perché determinano cosa costruisci, in che ordine, e cosa rifiuti.
 Fuori dai 4 pillar (materiale conservato in `pov.md`, sezione "Fuori struttura"): il CMO-collante come figura
 finita, e il caso "GTM engineering" come pillar a sé.
 
-**Lente AI (trasversale; è la tesi di B2 e B3, altrove alza la posta):** l'AI non crea il problema dell'accumulo,
+**Lente AI (trasversale; è la tesi di B2, B3 e A3, altrove alza la posta):** l'AI non crea il problema dell'accumulo,
 lo rende mortale. Costruire costa zero → Frankenstein 10x più veloci; la parità di feature non è più un fossato
 → il POV è l'unica cosa scarsa; il buyer annega nel rumore → la chiarezza vince perché è l'unica cosa
-comprensibile; anche l'execution di marketing costa zero → decidere conta più che coordinare.
+comprensibile; anche l'execution di marketing costa zero → decidere conta più che coordinare; chi non ha una
+tesi lascia decidere gli strumenti di tutti → converge da solo sul prodotto medio (Product Slop); costruire costa
+poco anche a chi sta nei segmenti vicini → i competitor entrano nel tuo mentre tu ti allarghi nel loro.
+Messaggio sintetico: andare veloci sì, ma con direzione e in profondità, o vai veloce verso il prodotto medio.
 
 **Frase manifesto:** "Crediamo che un prodotto confuso non sia un problema di comunicazione ma di decisioni
 mai prese, e per questo usiamo il positioning come prima leva. Quella che taglia, non quella che racconta:
