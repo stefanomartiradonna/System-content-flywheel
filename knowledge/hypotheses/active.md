@@ -61,6 +61,7 @@ Regole:
 **Status**: 4 evidenze concordi, nessuna contro.
 **Nota 2026-10-05 (perché NON è ancora una regola)**: vale lo stesso blocco di H01 — le 4 evidenze sono su audience altrui, zero su quella italiana. In più qui c'è una variabile che le evidenze non isolano: Wester e Voje mettono i numeri in un contesto dove sono *loro dati originali* (assessment proprio, survey propria). Non è dimostrato che un numero preso in prestito da un autore funzioni come proof allo stesso modo. Da testare separando i due casi: hook con un mio numero contro hook con un numero citato.
 **Nota 2026-10-26 (prima coppia sulla mia audience)**: nella stessa settimana sono usciti un post che regge su un conto costruito da me (20/10: quanti contratti servono per pagare un sales a parità di ACV, tecnica T04) e due che riassumono ricerche altrui (19/10 Digital Applied, 23/10 Forrester). È la prima coppia utile per separare "numero mio" da "numero citato". Dati ancora freschi: si leggono a maturità nel run del 2026-11-02, e il cockpit del 2026-10-26 ne fa l'esperimento della settimana. Numeri nel report privato.
+**Nota 2026-11-11 (coppia letta a maturità)**: il post con il conto costruito da me ha fatto un ER molto sopra il riferimento personale; i due che riassumono ricerche altrui sono rimasti sotto. Direzione coerente con la nota del 2026-10-05, ma sono tre post e le interazioni sono poche: aneddoto, non evidenza. Per i commenti, il dato del post con il conto è letto, quello degli altri due può essere incompleto.
 
 ---
 
