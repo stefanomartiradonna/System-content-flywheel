@@ -30,7 +30,8 @@ aggiornato invece di seguire questo indice.
   Fase 4  Conversioni manuali: legge conversions.md (i DM, che nessun sistema vede)
   Fase 5  Autori della watchlist, OGNI settimana, su fino a quattro canali ciascuno (LinkedIn,
           newsletter/Substack propria, X, Instagram) sulla finestra dall'ultimo report a oggi,
-          piu' i temi core sul web e il "radar X" per nuovi creator su brand/SaaS/AI/GTM.
+          piu' i temi core sul web. Solo nel primo run del mese anche il RADAR MENSILE: insight
+          su tech e SaaS tech B2B (non creator), dalla ricerca X sugli account che seguo e dal web.
           COPERTURA OBBLIGATORIA: se non fai in tempo a passare per ogni autore della tabella,
           dichiaralo per nome nel report invece di lasciarlo intuire da un'assenza silenziosa
   Fase 6  Temi della settimana da quattro fonti:
@@ -49,7 +50,7 @@ aggiornato invece di seguire questo indice.
   Fase 9  Auto-miglioramento: impara dalle mie correzioni, dalle previsioni verificate e da quali
           voci delle liste scelgo (incluso l'asse categoria mix)
   Fase 10 Output: report su GOOGLE DOC (cartella Content Cockpit su Drive) con anche il mix dei
-          contenuti reale contro target e il radar X, copia .md nel repo privato in
+          contenuti reale contro target e, se e' il primo run del mese, il radar mensile, copia .md nel repo privato in
           linkedin/cockpit/, poi committa
 
 Fermati alla Fase 7 e aspetta. Proponi le tre liste (5 notizie tech, fino a 5 angoli dagli autori,
