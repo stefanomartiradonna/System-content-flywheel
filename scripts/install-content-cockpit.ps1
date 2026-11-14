@@ -190,6 +190,7 @@ $attesi = @(
     @{ Dove = $Flywheel;        File = 'CLAUDE.md';                                  Cosa = 'istruzioni del progetto' },
     @{ Dove = $Flywheel;        File = 'knowledge\INDEX.md';                         Cosa = 'knowledge base' },
     @{ Dove = $Flywheel;        File = 'scripts\prompt-content-cockpit.md';          Cosa = 'prompt della routine' },
+    @{ Dove = $Flywheel;        File = 'scripts\scan_esterno.py';                    Cosa = 'registro di copertura della Fase 5' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\parse_snapshot.py';                 Cosa = 'script dei dati' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\metrics.csv';                       Cosa = 'numeri dei post' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\posts-full.md';                     Cosa = 'testi dei post' },

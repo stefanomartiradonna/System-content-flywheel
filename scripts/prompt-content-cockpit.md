@@ -28,12 +28,14 @@ aggiornato invece di seguire questo indice.
   Fase 2  KPI dei post sulla finestra matura, migliore della settimana, trend, anti-rumore
   Fase 3  PostHog: visite al sito e click sulle CTA (attenzione al project, punto 1 sotto)
   Fase 4  Conversioni manuali: legge conversions.md (i DM, che nessun sistema vede)
-  Fase 5  Autori della watchlist, OGNI settimana, su fino a quattro canali ciascuno (LinkedIn,
-          newsletter/Substack propria, X, Instagram) sulla finestra dall'ultimo report a oggi,
-          piu' i temi core sul web. Solo nel primo run del mese anche il RADAR MENSILE: insight
-          su tech e SaaS tech B2B (non creator), dalla ricerca X sugli account che seguo e dal web.
-          COPERTURA OBBLIGATORIA: se non fai in tempo a passare per ogni autore della tabella,
-          dichiaralo per nome nel report invece di lasciarlo intuire da un'assenza silenziosa
+  Fase 5  Autori della watchlist, OGNI settimana, su fino a cinque canali ciascuno (LinkedIn,
+          newsletter/Substack propria, X, YouTube, Instagram) sulla finestra dall'ultimo report a
+          oggi, piu' i temi core sul web. Le newsletter le leggi tu; se un pezzo e' a pagamento,
+          dimmelo (titolo e link) e te lo incollo io.
+          YouTube e le newsletter con feed li legge lo script scripts/scan_esterno.py; il resto lo leggi tu.
+          COPERTURA OBBLIGATORIA, CERTIFICATA DA UNO SCRIPT: prima lanci `scan_esterno.py scan`,
+          poi chiudi ogni riga aperta con `segna` (nota obbligatoria), poi `verifica` deve dare
+          exit 0. Se non lo da, non passi alla Fase 6 (vedi punto 6)
   Fase 6  Temi della settimana da quattro fonti:
           (a) la mia settimana: commit, file nuovi, mail, calendario e le CALL CON I CLIENTI
               lette da Granola (domande che tornano, parole loro, sintomo prima della diagnosi)
@@ -50,7 +52,7 @@ aggiornato invece di seguire questo indice.
   Fase 9  Auto-miglioramento: impara dalle mie correzioni, dalle previsioni verificate e da quali
           voci delle liste scelgo (incluso l'asse categoria mix)
   Fase 10 Output: report su GOOGLE DOC (cartella Content Cockpit su Drive) con anche il mix dei
-          contenuti reale contro target e, se e' il primo run del mese, il radar mensile, copia .md nel repo privato in
+          contenuti reale contro target e l'esito del registro di copertura, copia .md nel repo privato in
           linkedin/cockpit/, poi committa
 
 Fermati alla Fase 7 e aspetta. Proponi le tre liste (5 notizie tech, fino a 5 angoli dagli autori,
@@ -86,7 +88,9 @@ I cinque punti dove si sbaglia piu facilmente:
    NON proseguire a Fase 6/7 e NON scrivere un report come se la copertura fosse completa. Manda una
    notifica push con cosa e bloccato e cosa mi serve per sbloccarlo, poi consegna comunque un report
    parziale con le Fasi 0-4 (KPI, mix, sito, conversioni, gia' indipendenti dagli autori) intitolato
-   "parziale, fermato a Fase 5". Dettaglio completo nella skill, sezione "Fase 5 e bloccante".
+   "parziale, fermato a Fase 5". Dettaglio completo nella skill, sezione "Fase 5 e bloccante". La copertura la certifica
+   scripts/scan_esterno.py verifica (exit 0 = completa): un autore o un tema non chiusi nel registro
+   sono un blocco, non una dimenticanza.
 
 Tre regole su cosa resta privato:
 

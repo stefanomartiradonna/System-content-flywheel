@@ -2,7 +2,7 @@
 
 Ogni lunedì alle 8:00 Claude prepara il report sui contenuti, su Google Doc: misura i post LinkedIn
 della settimana matura e ricalcola cosa funziona su tutto lo storico, legge sito, conversioni e call,
-legge gli autori di riferimento su LinkedIn/Substack/X/Instagram (una volta al mese anche un radar di insight su tech e SaaS tech B2B), e chiude
+legge gli autori di riferimento su LinkedIn, newsletter, X, YouTube e Instagram (con un registro che garantisce che nessuno venga saltato), e chiude
 con tre liste tra cui scegliere: 5 notizie tech da leggere con i propri pillar, fino a 5 angoli dagli
 autori e fino a 3 candidati Build in Public/Personal Brand/Offer dalla propria settimana. Riporta
 anche il mix dei contenuti per categoria, reale contro target. Poi si ferma e aspetta la scelta.
@@ -21,6 +21,8 @@ partendo solo da GitHub.
 |---|---|---|
 | Cosa fa la routine, fase per fase | repo `claude-brain`, `skills/content-cockpit/SKILL.md` | pubblico |
 | Autori e temi da leggere | repo `claude-brain`, `skills/content-cockpit/references/watchlist.md` | pubblico |
+| Registro di copertura e lettura dei feed YouTube/newsletter | questo repo, `scripts/scan_esterno.py` (solo Python 3, nessuna chiave) | pubblico |
+| Registro di copertura e contenuti letti, uno per run | repo `claude-private-refs`, `linkedin/scan-esterno/` | **privato** |
 | La skill di scrittura che usa (`linkedin-viral-post-writer`) | repo `claude-brain`, `skills/` | pubblico |
 | Il prompt con cui parte | questo repo, `scripts/prompt-content-cockpit.md` | pubblico |
 | Installer e lancio a mano | questo repo, `scripts/` | pubblico |
