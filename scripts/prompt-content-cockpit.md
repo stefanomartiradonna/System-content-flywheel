@@ -34,8 +34,10 @@ aggiornato invece di seguire questo indice.
           dimmelo (titolo e link) e te lo incollo io.
           YouTube e le newsletter con feed li legge lo script scripts/scan_esterno.py; il resto lo leggi tu.
           COPERTURA OBBLIGATORIA, CERTIFICATA DA UNO SCRIPT: prima lanci `scan_esterno.py scan`,
-          poi chiudi ogni riga aperta con `segna` (nota obbligatoria), poi `verifica` deve dare
-          exit 0. Se non lo da, non passi alla Fase 6 (vedi punto 6)
+          poi chiudi ogni riga aperta con `segna` (nota obbligatoria). Un canale che da' 404 o
+          non si legge NON si abbandona: a fine lettura lanci `riprova` e lo riprovi a mano finche'
+          non lo chiudi (non raggiungibile solo dopo 3 tentativi distanti 10 minuti, uno a mano).
+          Poi `verifica` deve dare exit 0. Se non lo da, non passi alla Fase 6 (vedi punto 6)
   Fase 6  Temi della settimana da quattro fonti:
           (a) la mia settimana: commit, file nuovi, mail, calendario e le CALL CON I CLIENTI
               lette da Granola (domande che tornano, parole loro, sintomo prima della diagnosi)

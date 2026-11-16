@@ -8,7 +8,8 @@ Se il modello ne salta una, nessuno se ne accorge. Qui la copertura non e' una r
 prompt, e' un registro: una riga per ogni lettura dovuta, e un comando (`verifica`) che esce con errore
 finche resta una riga aperta. La Fase 6 non parte se `verifica` non da exit 0.
 
-Tre comandi:
+Quattro comandi (riprova: a fine Fase 5 rilegge con lo script le righe ancora "da_riprovare";
+un canale che non risponde non si abbandona, vedi MIN_TENTATIVI):
 
   scan      Legge la watchlist, costruisce il registro (una riga per ogni autore x canale, per ogni tema
             core). Legge DA SOLO i canali che hanno un feed (YouTube, newsletter) e
@@ -48,7 +49,15 @@ SOGLIA_FERMO_SETTIMANE = 8          # stessa soglia di Fase 9, loop C
 SOGLIA_FEED_OBSOLETO_SETTIMANE = 26  # un feed newsletter fermo da piu' di cosi' non chiude la riga
 SOGLIA_FUORI_SCALA = 3.0            # views / mediana del canale
 TENUTO = "[tenuto]"                 # marcatore nella cella: Stefano ha deciso di tenere il canale
-CAMPI_REGISTRO = ["id", "tipo", "voce", "canale", "url", "modo", "esito", "n_contenuti", "nota"]
+CAMPI_REGISTRO = ["id", "tipo", "voce", "canale", "url", "modo", "esito", "n_contenuti", "nota",
+                  "tentativi"]
+# Un canale che non risponde non si abbandona (richiesta di Stefano, 16/11/2026): resta aperto come
+# "da_riprovare" e si riprende a fine Fase 5. Si chiude come non raggiungibile solo dopo
+# MIN_TENTATIVI tentativi falliti, distanti almeno GAP_TENTATIVI_MIN minuti, di cui almeno uno a mano.
+# Senza limite un sito giu' per un giorno bloccherebbe il report del lunedi' per sempre.
+MIN_TENTATIVI = 3
+GAP_TENTATIVI_MIN = 10
+DA_RIPROVARE = "da_riprovare"
 CAMPI_SCAN = ["autore", "canale", "data", "titolo", "url", "views", "mediana_canale",
               "rapporto_mediana", "estratto"]
 ESITI_CHIUSI = {"contenuti", "niente_nella_finestra", "non_raggiungibile"}
@@ -102,6 +111,36 @@ def fetch(url, tentativi=2, timeout=25, headers=None, riprova_404=False):
             ultimo = "%s: %s" % (type(e).__name__, e)
         time.sleep(1.5 * (k + 1))
     return None, ultimo
+
+
+def tentativi(r):
+    """Lista dei tentativi falliti: 'AAAA-MM-GGTHH:MM|script' o '...|manuale', separati da ';'."""
+    return [t for t in (r.get("tentativi") or "").split(";") if t.strip()]
+
+
+def aggiungi_tentativo(r, modo, ora=None):
+    """Registra un tentativo fallito. Restituisce False se e' troppo vicino al precedente: in quel caso
+    non conta, perche' riprovare dopo un minuto non e' 'tornarci a fine analisi'."""
+    ora = ora or dt.datetime.now()
+    lista = tentativi(r)
+    if lista:
+        prec = dt.datetime.fromisoformat(lista[-1].split("|")[0])
+        if (ora - prec).total_seconds() < GAP_TENTATIVI_MIN * 60:
+            return False
+    lista.append("%s|%s" % (ora.strftime("%Y-%m-%dT%H:%M"), modo))
+    r["tentativi"] = ";".join(lista)
+    return True
+
+
+def puo_chiudere_non_raggiungibile(r):
+    lista = tentativi(r)
+    return len(lista) >= MIN_TENTATIVI and any(t.endswith("|manuale") for t in lista)
+
+
+def stato_tentativi(r):
+    lista = tentativi(r)
+    manuali = sum(1 for t in lista if t.endswith("|manuale"))
+    return "%d tentativi su %d (di cui a mano %d, ne serve almeno 1)" % (len(lista), MIN_TENTATIVI, manuali)
 
 
 def a_data(testo):
@@ -420,8 +459,10 @@ def leggi_youtube(r, dal, al, oggi, contenuti):
         # Feed rotto non vuol dire canale fermo: si guarda la pagina del canale prima di decidere.
         items, err2 = leggi_pagina_canale(m.group(1), oggi, dal)
         if items is None:
-            r["esito"], r["nota"] = "non_raggiungibile", \
-                "feed RSS: %s; %s. Fallback manuale: pagina canale da Chrome" % (err, err2)
+            aggiungi_tentativo(r, "script")
+            r["esito"], r["nota"] = DA_RIPROVARE, (
+                "feed RSS: %s; %s. Riprova a fine Fase 5 con 'riprova', poi a mano da Chrome "
+                "(schede Video E Short). %s" % (err, err2, stato_tentativi(r)))
             return None
         fonte.append("FEED RSS ROTTO (%s), letto dalla pagina canale: views arrotondate%s" % (
             err, ", alcune date stimate" if any(i.get("data_stimata") for i in items) else ""))
@@ -481,9 +522,13 @@ def candidati_feed(url):
 
 def leggi_newsletter(r, dal, al, oggi, contenuti):
     r["modo"] = "manuale"
+    errori_transitori = []
     for cand in candidati_feed(r["url"]):
         data, err = fetch(cand, tentativi=1)
         if data is None:
+            # 404 su un indirizzo candidato e' normale (quel feed non esiste); timeout, 5xx o rete no.
+            if err and not re.match(r"HTTP (403|404|410)$", err):
+                errori_transitori.append("%s: %s" % (cand, err))
             continue
         try:
             items = parse_feed(data)
@@ -527,8 +572,24 @@ def leggi_newsletter(r, dal, al, oggi, contenuti):
         r["esito"] = "contenuti" if nuovi else "niente_nella_finestra"
         r["nota"] = note
         return
+    if errori_transitori:
+        r["modo"] = "script"
+        aggiungi_tentativo(r, "script")
+        r["esito"] = DA_RIPROVARE
+        r["nota"] = ("feed non raggiunto (%s). Riprova a fine Fase 5 con 'riprova', poi a mano. %s" % (
+            "; ".join(errori_transitori[:2]), stato_tentativi(r)))
+        return
     r["esito"] = "da_leggere"
     r["nota"] = suggerimento_manuale(r)
+
+
+def leggi_riga_script(r, dal, al, oggi, contenuti):
+    if r["tipo"] == "autore" and r["canale"] == "youtube":
+        leggi_youtube(r, dal, al, oggi, contenuti)
+    elif r["tipo"] == "autore" and r["canale"] == "newsletter":
+        leggi_newsletter(r, dal, al, oggi, contenuti)
+    else:
+        r["nota"] = suggerimento_manuale(r)
 
 
 def cmd_scan(a):
@@ -558,17 +619,13 @@ def cmd_scan(a):
     ferme = []
     out("Finestra: dal %s al %s (oggi %s). Righe dovute: %d" % (dal, al, oggi, len(righe)))
     for r in righe:
-        r.update({"modo": "manuale", "esito": "da_leggere", "n_contenuti": "", "nota": ""})
-        if r["tipo"] == "autore" and r["canale"] == "youtube":
-            leggi_youtube(r, dal, al, oggi, contenuti)
-        elif r["tipo"] == "autore" and r["canale"] == "newsletter":
-            leggi_newsletter(r, dal, al, oggi, contenuti)
-        else:
-            r["nota"] = suggerimento_manuale(r)
+        v = vecchio.get(r["id"])
+        r.update({"modo": "manuale", "esito": "da_leggere", "n_contenuti": "", "nota": "",
+                  "tentativi": (v or {}).get("tentativi") or ""})
+        leggi_riga_script(r, dal, al, oggi, contenuti)
         if r["modo"] == "manuale" and not r["nota"]:
             r["nota"] = suggerimento_manuale(r)
-        v = vecchio.get(r["id"])
-        if v and r["modo"] == "manuale" and v.get("esito") in ESITI_CHIUSI:
+        if v and r["modo"] == "manuale" and (v.get("esito") in ESITI_CHIUSI or v.get("esito") == DA_RIPROVARE):
             r["esito"], r["n_contenuti"], r["nota"] = v["esito"], v["n_contenuti"], v["nota"]
         if "FERMO" in r["nota"] and TENUTO not in r["cella"]:
             ferme.append((r["voce"] + " [" + r["canale"] + "]", r["nota"]))
@@ -584,7 +641,11 @@ def cmd_scan(a):
 
     chiuse = [r for r in righe if r["esito"] in ESITI_CHIUSI]
     aperte = [r for r in righe if r["esito"] not in ESITI_CHIUSI]
-    out("Chiuse dallo script: %d. Da leggere a mano: %d." % (len(chiuse), len(aperte)))
+    riprovare = [r for r in aperte if r["esito"] == DA_RIPROVARE]
+    out("Chiuse dallo script: %d. Da leggere a mano: %d (di cui %d da riprovare)." % (
+        len(chiuse), len(aperte), len(riprovare)))
+    for r in riprovare:
+        out("  DA RIPROVARE a fine Fase 5: %s [%s] %s" % (r["voce"], r["canale"], r["nota"]))
     nr = [r for r in chiuse if r["esito"] == "non_raggiungibile"]
     for r in nr:
         out("  NON RAGGIUNGIBILE: %s [%s] %s" % (r["voce"], r["canale"], r["nota"]))
@@ -632,6 +693,41 @@ def scrivi_registro(p, righe):
         w.writerows(righe)
 
 
+def cmd_riprova(a):
+    """Rilegge con lo script le righe da_riprovare (YouTube, newsletter con feed). Si lancia a fine
+    Fase 5, dopo la lettura manuale: e' il 'tornarci a fine analisi'. Quelle che falliscono ancora
+    restano aperte con un tentativo in piu'; dopo i tentativi dello script va provato a mano."""
+    p = trova_registro(a)
+    righe = leggi_registro(p)
+    oggi = dt.date.fromisoformat(p.stem.replace("copertura-", ""))
+    dal = dt.date.fromisoformat(a.dal)
+    al = dt.date.fromisoformat(a.al) if a.al else oggi
+    wl = {r["id"]: r for r in costruisci_righe(Path(a.watchlist).read_text(encoding="utf-8"))}
+    contenuti = []
+    target = [r for r in righe if r["esito"] == DA_RIPROVARE and r["modo"] == "script"]
+    if not target:
+        out("Nessuna riga da riprovare con lo script.")
+    for r in target:
+        r["cella"] = wl.get(r["id"], {}).get("cella", r.get("url", ""))
+        prima = tentativi(r)
+        leggi_riga_script(r, dal, al, oggi, contenuti)
+        if r["esito"] == DA_RIPROVARE:
+            contato = len(tentativi(r)) > len(prima)
+            out("ANCORA GIU': %s [%s]. %s%s" % (r["voce"], r["canale"], stato_tentativi(r),
+                "" if contato else " (tentativo non contato: meno di %d minuti dal precedente)" % GAP_TENTATIVI_MIN))
+            if len(tentativi(r)) >= MIN_TENTATIVI - 1:
+                out("   Ora provalo a mano da Chrome e chiudi con 'segna'.")
+        else:
+            out("RIUSCITA: %s [%s] -> %s" % (r["voce"], r["canale"], r["esito"]))
+    scrivi_registro(p, righe)
+    if contenuti:
+        f_scan = p.parent / p.name.replace("copertura-", "scan-esterno-")
+        with open(f_scan, "a", newline="", encoding="utf-8") as fh:
+            csv.writer(fh).writerows(contenuti)
+        out("Aggiunti %d contenuti a %s" % (len(contenuti), f_scan.name))
+    stampa_aperte([r for r in righe if r["esito"] not in ESITI_CHIUSI])
+
+
 def cmd_segna(a):
     esito = MAPPA_ESITI.get(a.esito)
     if not esito:
@@ -648,6 +744,28 @@ def cmd_segna(a):
             if r["modo"] == "script" and r["esito"] in ("contenuti", "niente_nella_finestra"):
                 fail("la riga %s e' stata letta dallo script: rilancia 'scan --rifai' se serve. "
                      "Si puo' chiudere a mano solo una riga che lo script non ha potuto raggiungere." % a.id)
+            if esito == "non_raggiungibile":
+                # Un fallimento a mano e' un tentativo, non una chiusura: la riga si chiude solo
+                # quando i tentativi bastano. Altrimenti resta aperta e si riprende a fine Fase 5.
+                contato = aggiungi_tentativo(r, "manuale")
+                if not contato:
+                    fail("tentativo su %s non contato: meno di %d minuti dal precedente. Passa ad altre "
+                         "righe e torna su questa a fine Fase 5. %s" % (
+                             a.id, GAP_TENTATIVI_MIN, stato_tentativi(r)), code=1)
+                r["nota"] = (r.get("nota", "") + " | " if r.get("nota") else "") + a.nota.strip()
+                if not puo_chiudere_non_raggiungibile(r):
+                    r["esito"] = DA_RIPROVARE
+                    scrivi_registro(p, righe)
+                    out("NON chiusa: %s resta da riprovare. %s. Torna su questa riga a fine Fase 5 "
+                        "(e prova un altro metodo: Chrome, WebFetch, ricerca)." % (a.id, stato_tentativi(r)))
+                    return
+                r["esito"] = esito
+                r["n_contenuti"] = 0
+                scrivi_registro(p, righe)
+                aperte = [x for x in righe if x["esito"] not in ESITI_CHIUSI]
+                out("Chiusa come non raggiungibile dopo %s: %s. Restano %d righe aperte su %d." % (
+                    stato_tentativi(r), a.id, len(aperte), len(righe)))
+                return
             r["esito"] = esito
             r["n_contenuti"] = a.n if a.n is not None else 0
             r["nota"] = a.nota.strip()
@@ -685,6 +803,15 @@ def cmd_verifica(a):
         stampa_aperte(aperte)
     for r in senza_nota:
         errori.append("chiusa senza nota: " + r["id"])
+    for r in righe:
+        if r["esito"] == "non_raggiungibile" and not puo_chiudere_non_raggiungibile(r):
+            errori.append("chiusa come non raggiungibile troppo presto: %s (%s). Riprovala." % (
+                r["id"], stato_tentativi(r)))
+    riprovare = [r for r in aperte if r["esito"] == DA_RIPROVARE]
+    if riprovare:
+        out("\nDA RIPROVARE (non abbandonarle: 'riprova' per quelle dello script, poi a mano):")
+        for r in riprovare:
+            out("  %-34s %s" % (r["id"], stato_tentativi(r)))
     for e in errori:
         out("  " + e)
     if aperte or errori:
@@ -716,6 +843,9 @@ def main():
     s.add_argument("--al", help="fine finestra (default: oggi)")
     s.add_argument("--oggi", help="solo per test")
     s.add_argument("--rifai", action="store_true", help="rilegge i feed, conserva le righe chiuse a mano")
+    rp = sub.add_parser("riprova", help="a fine Fase 5: rilegge le righe dello script ancora da riprovare")
+    rp.add_argument("--dal", required=True, help="inizio finestra autori, lo stesso dello scan")
+    rp.add_argument("--al", help="fine finestra (default: la data del registro)")
     g = sub.add_parser("segna", help="chiude una riga del registro")
     g.add_argument("--id", required=True)
     g.add_argument("--esito", required=True, help="contenuti | niente | non_raggiungibile")
@@ -723,7 +853,7 @@ def main():
     g.add_argument("--nota", required=True)
     sub.add_parser("verifica", help="exit 0 solo se la copertura e' completa")
     a = ap.parse_args()
-    {"scan": cmd_scan, "segna": cmd_segna, "verifica": cmd_verifica}[a.cmd](a)
+    {"scan": cmd_scan, "segna": cmd_segna, "verifica": cmd_verifica, "riprova": cmd_riprova}[a.cmd](a)
 
 
 if __name__ == "__main__":
