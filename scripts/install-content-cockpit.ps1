@@ -191,6 +191,8 @@ $attesi = @(
     @{ Dove = $Flywheel;        File = 'knowledge\INDEX.md';                         Cosa = 'knowledge base' },
     @{ Dove = $Flywheel;        File = 'scripts\prompt-content-cockpit.md';          Cosa = 'prompt della routine' },
     @{ Dove = $Flywheel;        File = 'scripts\scan_esterno.py';                    Cosa = 'registro di copertura della Fase 5' },
+    @{ Dove = $Flywheel;        File = 'scripts\linkedin_commenti.js';               Cosa = 'lettura dei commenti dei post' },
+    @{ Dove = $CartellaPrivata; File = 'linkedin\aggiorna_commenti.py';              Cosa = 'ingresso dei commenti nel dataset' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\parse_snapshot.py';                 Cosa = 'script dei dati' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\metrics.csv';                       Cosa = 'numeri dei post' },
     @{ Dove = $CartellaPrivata; File = 'linkedin\posts-full.md';                     Cosa = 'testi dei post' },

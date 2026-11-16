@@ -21,7 +21,9 @@ partendo solo da GitHub.
 |---|---|---|
 | Cosa fa la routine, fase per fase | repo `claude-brain`, `skills/content-cockpit/SKILL.md` | pubblico |
 | Autori e temi da leggere | repo `claude-brain`, `skills/content-cockpit/references/watchlist.md` | pubblico |
-| Registro di copertura e lettura dei feed YouTube/newsletter | questo repo, `scripts/scan_esterno.py` (solo Python 3, nessuna chiave) | pubblico |
+| Registro di copertura e lettura dei feed YouTube/newsletter (con ripresa dei canali che non rispondono, comando `riprova`) | questo repo, `scripts/scan_esterno.py` (solo Python 3, nessuna chiave) | pubblico |
+| Lettura dei commenti di un post LinkedIn dalla pagina del post | questo repo, `scripts/linkedin_commenti.js` (lo esegue il cockpit nel Chrome loggato) | pubblico |
+| Ingresso dei commenti nel dataset, testi dei commenti | repo `claude-private-refs`, `linkedin/aggiorna_commenti.py` e `linkedin/commenti.csv` | **privato** |
 | Registro di copertura e contenuti letti, uno per run | repo `claude-private-refs`, `linkedin/scan-esterno/` | **privato** |
 | La skill di scrittura che usa (`linkedin-viral-post-writer`) | repo `claude-brain`, `skills/` | pubblico |
 | Il prompt con cui parte | questo repo, `scripts/prompt-content-cockpit.md` | pubblico |
