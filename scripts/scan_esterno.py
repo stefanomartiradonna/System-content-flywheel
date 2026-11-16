@@ -19,7 +19,8 @@ Tre comandi:
   verifica  Exit 0 solo se OGNI riga della watchlist e' chiusa. Altrimenti stampa le righe aperte, exit 1.
 
 Solo libreria standard di Python 3.8+. Nessuna chiave. Funziona su Windows (`py -3 scripts\\scan_esterno.py`).
-I feed YouTube e Substack sono pubblici: niente API, niente quota.
+I feed YouTube e Substack sono pubblici: niente API, niente quota. Se il feed YouTube non risponde
+(succede per ore, con 404), lo script legge la pagina pubblica del canale, schede Video e Short.
 
 Dati scritti (nel repo privato, default accanto al repo flywheel):
   linkedin/scan-esterno/copertura-AAAA-MM-GG.csv   il registro
@@ -30,6 +31,7 @@ import csv
 import datetime as dt
 import email.utils
 import html
+import json
 import re
 import sys
 import time
@@ -80,22 +82,25 @@ def fail(msg, code=2):
     sys.exit(code)
 
 
-def fetch(url, tentativi=2, timeout=25):
+def fetch(url, tentativi=2, timeout=25, headers=None, riprova_404=False):
+    """riprova_404: i feed YouTube rispondono 404 a intermittenza (16/11/2026: 404 su tutti e cinque i
+    canali la mattina, 200 due ore dopo). Per loro un 404 non e' definitivo e si riprova."""
     ultimo = None
+    h = {"User-Agent": UA,
+         "Accept": "application/atom+xml,application/rss+xml,application/xml,text/xml,*/*"}
+    h.update(headers or {})
     for k in range(tentativi):
         try:
-            req = urllib.request.Request(url, headers={
-                "User-Agent": UA,
-                "Accept": "application/atom+xml,application/rss+xml,application/xml,text/xml,*/*"})
+            req = urllib.request.Request(url, headers=h)
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.read(), None
         except urllib.error.HTTPError as e:
             ultimo = "HTTP %s" % e.code
-            if e.code in (403, 404, 410):
+            if e.code in (403, 410) or (e.code == 404 and not riprova_404):
                 break
         except Exception as e:  # rete, timeout, TLS
             ultimo = "%s: %s" % (type(e).__name__, e)
-        time.sleep(1.5)
+        time.sleep(1.5 * (k + 1))
     return None, ultimo
 
 
@@ -280,6 +285,120 @@ def finestra_ok(d, dal, al):
     return d is not None and dal <= d <= al
 
 
+# Pagina canale: fallback quando il feed RSS non risponde. Il consenso cookie europeo si salta con il
+# cookie SOCS; hl=en rende le eta' relative leggibili ("3d ago", "2w ago").
+YT_BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/130.0 Safari/537.36",
+    "Accept": "text/html,*/*", "Accept-Language": "en-US,en;q=0.9", "Cookie": "SOCS=CAI"}
+ETA_RE = re.compile(r"^(\d+)\s*(min|h|d|w|mo|y)\b")
+GIORNI_UNITA = {"min": 0, "h": 0, "d": 1, "w": 7, "mo": 30, "y": 365}
+
+
+def numero_views(s):
+    m = re.match(r"^([\d.,]+)\s*([KMB]?)", (s or "").replace(",", ""))
+    if not m:
+        return None
+    n = float(m.group(1))
+    return int(n * {"": 1, "K": 1e3, "M": 1e6, "B": 1e9}[m.group(2)])
+
+
+def lockups(o, acc):
+    if isinstance(o, dict):
+        if "lockupViewModel" in o:
+            v = o["lockupViewModel"]
+            meta = v.get("metadata", {}).get("lockupMetadataViewModel", {})
+            parti = [p.get("text", {}).get("content", "")
+                     for row in meta.get("metadata", {}).get("contentMetadataViewModel", {})
+                     .get("metadataRows", []) for p in row.get("metadataParts", [])]
+            acc.append((v.get("contentId"), meta.get("title", {}).get("content", ""), parti))
+        for x in o.values():
+            lockups(x, acc)
+    elif isinstance(o, list):
+        for x in o:
+            lockups(x, acc)
+    return acc
+
+
+def shorts(o, acc):
+    if isinstance(o, dict):
+        if "shortsLockupViewModel" in o:
+            v = o["shortsLockupViewModel"]
+            ov = v.get("overlayMetadata", {})
+            vid = (v.get("entityId") or "").replace("shorts-shelf-item-", "")
+            acc.append((vid, ov.get("primaryText", {}).get("content", ""),
+                        (ov.get("secondaryText", {}).get("content", "") or "").replace(" views", "")))
+            return acc
+        for x in o.values():
+            shorts(x, acc)
+    elif isinstance(o, list):
+        for x in o:
+            shorts(x, acc)
+    return acc
+
+
+def initial_data(url):
+    data, err = fetch(url, headers=YT_BROWSER_HEADERS)
+    if data is None:
+        return None, str(err)
+    m = re.search(r"ytInitialData\s*=\s*(\{.*?\});\s*</script>", data.decode("utf-8", "replace"), re.S)
+    if not m:
+        return None, "senza ytInitialData (pagina di consenso o layout cambiato)"
+    try:
+        return json.loads(m.group(1)), None
+    except ValueError as e:
+        return None, "JSON illeggibile: %s" % e
+
+
+def data_esatta(vid):
+    w, _ = fetch("https://www.youtube.com/watch?v=%s&hl=en" % vid, headers=YT_BROWSER_HEADERS)
+    md = re.search(r'"(?:publishDate|uploadDate)":"([^"]+)"', w.decode("utf-8", "replace")) if w else None
+    return a_data(md.group(1)) if md else None
+
+
+def leggi_pagina_canale(channel_id, oggi, dal, max_short=8):
+    """Fallback del feed: legge le schede Video e Short della pagina canale. Restituisce (items, errore)
+    nello stesso formato di parse_feed. Le date esatte vengono dalla pagina del singolo video: per il
+    video piu' recente sempre (serve a dire se il canale e' fermo), per quelli entro tre settimane, e per
+    gli Short fino al primo piu' vecchio dell'inizio finestra (la scheda Short non mostra date).
+    Le visualizzazioni arrivano arrotondate (7.2K). Gli Short hanno il titolo prefissato con [Short],
+    come promemoria che la mediana del canale mescola i due formati (vale anche per il feed)."""
+    base = "https://www.youtube.com/channel/%s/%s?hl=en&gl=US"
+    d_video, err_v = initial_data(base % (channel_id, "videos"))
+    d_short, err_s = initial_data(base % (channel_id, "shorts"))
+    if d_video is None and d_short is None:
+        return None, "pagina canale: video %s, short %s" % (err_v, err_s)
+    items = []
+    limite = None   # la scheda e' dal piu' recente: una data stimata non puo' superare quella sopra
+    for k, (vid, titolo, parti) in enumerate(lockups(d_video, []) if d_video else []):
+        if not vid:
+            continue
+        eta = next((p for p in parti if ETA_RE.match(p or "")), "")
+        me = ETA_RE.match(eta)
+        giorni = int(me.group(1)) * GIORNI_UNITA[me.group(2)] if me else None
+        data_v = oggi - dt.timedelta(days=giorni) if giorni is not None else None
+        esatta = data_esatta(vid) if (k == 0 or (giorni is not None and giorni <= 21)) else None
+        if esatta is None and data_v is not None and limite is not None:
+            data_v = min(data_v, limite)
+        limite = esatta or data_v or limite
+        items.append({"titolo": titolo, "url": "https://www.youtube.com/watch?v=" + vid,
+                      "data": esatta or data_v, "data_stimata": esatta is None,
+                      "views": numero_views(parti[0]) if parti else None,
+                      "estratto": "" if esatta else "eta' '%s' dalla pagina canale" % eta})
+    for vid, titolo, viste in (shorts(d_short, []) if d_short else [])[:max_short]:
+        if not vid:
+            continue
+        d = data_esatta(vid)
+        items.append({"titolo": "[Short] " + titolo, "url": "https://www.youtube.com/shorts/" + vid,
+                      "data": d, "data_stimata": d is None, "views": numero_views(viste),
+                      "estratto": "" if d else "data non leggibile"})
+        if d is not None and d < dal:
+            break   # la scheda e' in ordine dal piu' recente: oltre la finestra si smette
+    if not items:
+        return None, "pagina canale letta ma nessun video trovato (layout cambiato?)"
+    return items, None
+
+
 def leggi_youtube(r, dal, al, oggi, contenuti):
     m = re.search(r"\bID\s+(UC[0-9A-Za-z_-]{22})", r["cella"]) or \
         re.search(r"/channel/(UC[0-9A-Za-z_-]{22})", r["cella"])
@@ -288,25 +407,42 @@ def leggi_youtube(r, dal, al, oggi, contenuti):
             "ID canale mancante nella cella YouTube della watchlist"
         return None
     feed = "https://www.youtube.com/feeds/videos.xml?channel_id=" + m.group(1)
-    data, err = fetch(feed)
+    data, err = fetch(feed, tentativi=3, riprova_404=True)
     r["modo"] = "script"
-    if data is None:
-        r["esito"], r["nota"] = "non_raggiungibile", "feed YouTube: " + str(err)
-        return None
-    try:
-        items = parse_feed(data)
-    except ET.ParseError as e:
-        r["esito"], r["nota"] = "non_raggiungibile", "feed YouTube illeggibile: %s" % e
-        return None
-    viste = [i["views"] for i in items if i["views"] is not None]
-    med = median(viste) if viste else None
+    fonte = []
+    items = None
+    if data is not None:
+        try:
+            items = parse_feed(data)
+        except ET.ParseError as e:
+            err = "feed illeggibile: %s" % e
+    if items is None:
+        # Feed rotto non vuol dire canale fermo: si guarda la pagina del canale prima di decidere.
+        items, err2 = leggi_pagina_canale(m.group(1), oggi, dal)
+        if items is None:
+            r["esito"], r["nota"] = "non_raggiungibile", \
+                "feed RSS: %s; %s. Fallback manuale: pagina canale da Chrome" % (err, err2)
+            return None
+        fonte.append("FEED RSS ROTTO (%s), letto dalla pagina canale: views arrotondate%s" % (
+            err, ", alcune date stimate" if any(i.get("data_stimata") for i in items) else ""))
+    # Short e video lunghi hanno visualizzazioni di ordini diversi: ognuno si confronta con la mediana
+    # del suo formato (sul feed gli Short si riconoscono dal link /shorts/).
+    def short(i):
+        return "/shorts/" in i["url"]
+    mediane = {}
+    for fmt in (True, False):
+        v = [i["views"] for i in items if i["views"] is not None and short(i) == fmt]
+        mediane[fmt] = median(v) if v else None
     nuovi = [i for i in items if finestra_ok(i["data"], dal, al)]
     for i in nuovi:
+        med = mediane[short(i)]
         rap = round(i["views"] / med, 2) if (i["views"] is not None and med) else ""
-        contenuti.append([r["voce"], "youtube", i["data"].isoformat(), i["titolo"], i["url"],
+        titolo = i["titolo"] if (not short(i) or i["titolo"].startswith("[Short]")) else "[Short] " + i["titolo"]
+        contenuti.append([r["voce"], "youtube", i["data"].isoformat(), titolo, i["url"],
                           "" if i["views"] is None else i["views"],
                           "" if med is None else med, rap, i["estratto"]])
-    note = []
+        i["rapporto"] = rap
+    note = list(fonte)
     ultimo = max((i["data"] for i in items if i["data"]), default=None)
     if not items:
         note.append("feed vuoto: il canale non ha video pubblici")
@@ -319,9 +455,10 @@ def leggi_youtube(r, dal, al, oggi, contenuti):
                 ": candidato a uscire da YouTube"))
         else:
             note.append("ultimo video %s" % ultimo.isoformat())
-    fuori = [i for i in nuovi if i["views"] is not None and med and i["views"] / med >= SOGLIA_FUORI_SCALA]
+    fuori = [i for i in nuovi if i.get("rapporto") not in (None, "") and i["rapporto"] >= SOGLIA_FUORI_SCALA]
     if fuori:
-        note.append("%d video fuori scala (>= %.0fx la mediana del canale)" % (len(fuori), SOGLIA_FUORI_SCALA))
+        note.append("%d video fuori scala (>= %.0fx la mediana del canale per lo stesso formato)" % (
+            len(fuori), SOGLIA_FUORI_SCALA))
     r["n_contenuti"] = len(nuovi)
     r["esito"] = "contenuti" if nuovi else "niente_nella_finestra"
     r["nota"] = "; ".join(note)
