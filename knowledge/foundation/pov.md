@@ -7,7 +7,9 @@
 > Struttura: 1 POV-master (il manifesto) + **4 pillar** con **16 sotto-argomenti**. Ogni post/articolo
 > dovrebbe far scalare almeno un sotto-argomento.
 
-Ultima revisione: 2026-11-10. Metodo di Emily Segal (sintomo psicologico, naming) applicato al POV: Product Slop come forma che l'accumulo prende nell'era AI,
+Ultima revisione: 2026-11-16. In A3 il paragrafo su tasteslop (Emily Segal) come termine parente di Product Slop,
+approvato da Stefano. Struttura invariata.
+Revisione precedente: 2026-11-10. Metodo di Emily Segal (sintomo psicologico, naming) applicato al POV: Product Slop come forma che l'accumulo prende nell'era AI,
 i due danni (incomprensibile e indistinguibile), il perché dal lato del founder, fast fashion contro capsule collection,
 profondità come reinvestimento di quello che tagli. A3 e B3 riscritti, lente AI da 4 a 6 meccanismi. Struttura invariata.
 Revisione precedente: 2026-10-20. I pillar passano da 6 a 4 (tetto deciso da Stefano) e diventano 16 sotto-argomenti.
@@ -260,6 +262,14 @@ Due strade, stesso punto d'arrivo: nessuno ti sa distinguere.
 
 **Il meccanismo che li lega:** chi non ha una tesi prende il default. Nel caso annacquato il default è la richiesta
 del cliente più rumoroso; nel caso omologato è la risposta media del modello. In entrambi non hai deciso tu.
+
+**Un parente dal mondo del gusto.** Emily Segal (Nemesis, «TASTESLOP», maggio 2026) chiama *tasteslop* quello che
+succede quando il giudizio di gusto viene automatizzato o ridotto a segnali ripetibili: oggetti "di gusto" copiati e
+tolti dal contesto che gli dava senso. Per lei il gusto è una relazione validata socialmente, non una proprietà
+dell'oggetto, così come il posizionamento esiste solo rispetto alle alternative. Tra i suoi esempi c'è proprio il
+gusto usato per ripulire l'immagine di una società SaaS. Va citato come parente, non come sinonimo: tasteslop parla
+di estetica e status, Product Slop di decisioni di prodotto e di messaggio. L'articolo è una diagnosi, non dà rimedi.
+Fonte: https://nemesisglobal.substack.com/p/tasteslop (letto per intero il 2026-11-16).
 
 **Perché fa male in revenue:** quando sei medio, il buyer decide su prezzo e specifiche. Il posizionamento diventa
 rumore e resta lo sconto. Emily Segal (Grey Ocean Strategy, Nemesis, giugno 2026) la chiama linea di
