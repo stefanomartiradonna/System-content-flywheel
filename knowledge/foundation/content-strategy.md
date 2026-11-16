@@ -5,7 +5,9 @@
 > Qui sta la strategia editoriale (cosa produrre, per quale stadio del buyer, agganciato a quale trigger).
 > Le regole di *forma* per piattaforma restano in `../platforms/linkedin/rules.md` e `../platforms/substack/rules.md`.
 
-Ultima revisione: 2026-11-08 (nuova §2bis: mix dei contenuti per categoria, asse ortogonale ai 5
+Ultima revisione: 2026-11-16 (§2bis: un post che descrive come lavori è Offer; target invariati,
+compreso il 15% di Personal Brand, confermato da Stefano).
+Revisione precedente: 2026-11-08 (nuova §2bis: mix dei contenuti per categoria, asse ortogonale ai 5
 tipi del §2, adattato dal mix 2026 di Pierre Herubel).
 Revisione precedente: 2026-10-20 (etichette degli angle riallineate ai sotto-argomenti A1-D6 di `pov.md`).
 Revisione ancora precedente: 2026-10-12 (angle per i pillar nuovi dentro i tipi Opinion e POV/Framework).
@@ -93,7 +95,10 @@ prodotto proprio, dove il metodo stesso è l'offerta, non un'agenzia content-fir
   settimanale di Stefano — inclusa l'evoluzione del sistema di content flywheel stesso (skill che
   costruisce, decisioni di knowledge management), materiale raramente sfruttato oggi.
 - **Offer** — disponibilità, risultati clienti. Mai "compra da me" diretto: coerente con la regola
-  di voce "mai da guru". Si appoggia spesso a CASE/TEARDOWN come prova.
+  di voce "mai da guru". Si appoggia spesso a CASE/TEARDOWN come prova. **È Offer anche un post che
+  descrive come lavori** (cosa fai con un founder, cosa non fai, come si svolge l'ingaggio), pure
+  senza call to action e anche quando parte da una reazione o da un'opinione: deciso da Stefano il
+  2026-11-16 sui post del martellatore (13/11) e di Banana (5/11), prima taggati Thought Leadership.
 
 ### Mapping indicativo con i 5 tipi del §2 (non rigido)
 
